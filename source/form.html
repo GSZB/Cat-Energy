@@ -1,162 +1,141 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Программа Кэт энерджи</title>
-</head>
-<body>
-<header class="header" id="header">
-  <a class="logo-cat">
-    <img class="logo-cat__img" src="https://via.placeholder.com/33x38" alt="Логотип магазина Кэт энерджи" width="33" height="38">
-  </a>
-  <a class="logo-text" id="header__logo">
-    <img class="logo-text__img" src="https://via.placeholder.com/101x18" alt="Магазин Кэт энерджи" width="101" height="18">
-  </a>
-  <div class="menu">
-    <button class="menu-button" type="button">Меню</button>
-    <ul class="menu-list">
-      <li class="menu-list__item">
-        <a class="menu-list__link">Главная</a>
-      </li>
-      <li class="menu-list__item">
-        <a href="catalog.html" class="menu-list__link">Каталог продукции</a>
-      </li>
-      <li class="menu__item">
-        <a href="form.html" class="menu-list__link">Подбор программы</a>
-      </li>
-    </ul>
-  </div>
-</header>
-<main>
-  <section class="poll">
-    <h2 class="poll__title">Подбор программы</h2>
-    <p class="poll__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-      <fieldset class="cat">
-        <ul class="cat__list">
-          <li class="cat__item">
-            <label class="cat__label">
-              Имя:*
-              <input class="cat__input" type="text" name="name" placeholder="Барсик" aria-label="Имя котенка">
-            </label>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Программа Кэт энерджи</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header__container">
+        <a class="header__logo" href="index.html" id="header__logo">
+          <img class="logo-cat__img" src="img/logo-mobile.svg" alt="Логотип магазина Кэт энерджи" width="191" height="38">
+        </a>
+        <button class="menu-button" type="button">Меню</button>
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link">Главная</a>
           </li>
-          <li class="cat__item">
-            <label class="cat__label">
-              Вес (кг):*
-              <input class="cat__input" type="number" name="weight" placeholder="7" aria-label="Вес котенка в килограммах">
-            </label>
+          <li class="menu-list__item">
+            <a href="catalog.html" class="menu-list__link">Каталог продукции</a>
           </li>
-          <li class="cat__item">
-            <label class="cat__label">
-              Возраст (лет):
-              <input class="cat__input" type="number" name="age" placeholder="7" aria-label="Возраст котенка в годах">
-            </label>
+          <li class="menu-list__item">
+            <a href="form.html" class="menu-list__link">Подбор программы</a>
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="fitness">
-        <ul class="fitness__list">
-          <li class="fitness__item">
-            <label class="fitness__label">
-              <input class="fitness__input" type="radio" checked name="program" aria-label="Программа для похудения">
-              Похудение
-            </label>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="form-title">Подбор программы</h2>
+        <p class="form-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="cat">
+            <ul class="cat__list">
+              <li class="cat__item">
+                <label class="cat__label cat__label_name" for="cat-name">Имя:*</label>
+                <input class="cat__input" id="cat-name" type="text" name="name" placeholder="Барсик" aria-label="Имя котенка">
+              </li>
+              <li class="cat__item">
+                <label class="cat__label cat__label_weight" for="cat-weight">Вес (кг):*</label>
+                <input class="cat__input" id="cat-weight" type="number" name="weight" placeholder="7" aria-label="Вес котенка в килограммах">
+              </li>
+              <li class="cat__item">
+                <label class="cat__label cat__label_age" for="cat-age">Возраст (лет):</label>
+                <input class="cat__input" id="cat-age" type="number" name="age" placeholder="7" aria-label="Возраст котенка в годах">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="fitness">
+            <ul class="fitness__list">
+              <li class="fitness__item">
+                <input class="fitness__input" id="fitness-loss" type="radio" checked name="program" aria-label="Программа для похудения">
+                <label class="fitness__label" for="fitness-loss">Похудение</label>
+              </li>
+              <li class="fitness__item">
+                <input class="fitness__input" id="fitness-gain" type="radio" name="program" aria-label="Программа для набора веса">
+                <label class="fitness__label" for="fitness-gain">Набор массы</label>
+              </li>
+              <li class="fitness__item">
+                <input class="fitness__input" id="fitness-advice" type="radio" name="program" aria-label="Помощь в подборе программы">
+                <label class="fitness__label" for="fitness-advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="owner">
+            <legend class="owner__title">Контактные данные (владельца кота)</legend>
+            <ul class="owner__list">
+              <li class="owner__item">
+                <label class="owner__label" for="owner-email">E-mail:*</label>
+                <input class="owner__input owner__input_email" id="owner-email" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="E-mail владельца" required>
+              </li>
+              <li class="owner__item">
+                <label class="owner__label" for="owner-phone">Телефон:*</label>
+                <input class="owner__input owner__input_phone" id="owner-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" aria-label="Телефон владельца" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="comment">
+            <legend class="comment__title">Комментарий</legend>
+            <textarea class="comment__textarea" name="comment" maxlength="900" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="extra">
+            <legend class="extra__title">Дополнительно</legend>
+            <ul class="extra__list">
+              <li class="extra__item">
+                <input class="extra__input" id="extra-sugar" type="checkbox" checked name="extra" aria-label="Сахарозаменитель">
+                <label class="extra__label" for="extra-sugar">Сахарозаменитель</label>
+              </li>
+              <li class="extra__item">
+                <input class="extra__input" id="extra-water" type="checkbox" name="extra" aria-label="Питьевая вода">
+                <label class="extra__label" for="extra-water">Питьевая вода</label>
+              </li>
+              <li class="extra__item">
+                <input class="extra__input" id="extra-milk" type="checkbox" name="extra" aria-label="Молоко">
+                <label class="extra__label" for="extra-milk">Молоко</label>
+              </li>
+              <li class="extra__item">
+                <input class="extra__input" id="extra-vitamines" type="checkbox" name="extra" aria-label="Витамины">
+                <label class="extra__label" for="extra-vitamines">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="form__button" type="submit">Отправить заявку</button>
+          <p class="form__required">* — Обязательные поля</p>
+        </form>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="address">
+            <div class="address__info address__info_form">
+              <p class="address__offer">приглашаем <br> к сотрудничеству дилеров!</p>
+              <p class="address__position">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
+            <div class="address__overlay">
+              <img class="address__img" src="img/bg-map-mobile@1x.png" alt="Карта магазина по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="320" height="363">
+            </div>
+        </div>
+        <a href="index.html" class="logo__footer">
+          <img src="img/logo-footer.svg" alt="Магазин Кэт энерджи" class="logo-text__img" width="128" height="24">
+        </a>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link social__link_vk" aria-label="Интернет-магазин Кэт энерджи во вконтакте"></a>
           </li>
-          <li class="fitness__item">
-            <label class="fitness__label">
-              <input class="fitness__input" type="radio" name="program" aria-label="Программа для набора веса">
-              Набор массы
-            </label>
+          <li class="social__item">
+            <a href="#" class="social__link social__link_insta" aria-label="Интернет-магазин Кэт энерджи в инстаграме"></a>
           </li>
-          <li class="fitness__item">
-            <label class="fitness__label">
-              <input class="fitness__input" type="radio" name="program" aria-label="Помощь в подборе программы">
-              Не знаю (Нужен ваш совет)
-            </label>
+          <li class="social__item">
+            <a href="#" class="social__link social__link_fb" aria-label="Интернет-магазин Кэт энерджи в фейсбуке"></a>
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="owner">
-        <legend class="owner__title">Контактные данные (владельца кота)</legend>
-        <ul class="owner__list">
-          <li class="owner__item">
-            <label class="owner__label">
-              E-mail:*
-              <input class="owner__input" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="E-mail владельца">
-            </label>
-          </li>
-          <li class="owner__item">
-            <label class="owner__label">
-              Телефон:*
-              <input class="owner__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" aria-label="Телефон владельца">
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="comment">
-        <legend class="comment__title">Контактные данные (владельца кота)</legend>
-        <textarea class="comment__textarea" name="comment" maxlength="900" cols="30" rows="10"
-                  placeholder="Расскажите обо всех повадках кота"></textarea>
-      </fieldset>
-      <fieldset class="extra">
-        <legend class="extra__title">Дополнительно</legend>
-        <ul class="extra__list">
-          <li class="extra__item">
-            <label class="extra__label">
-              <input class="extra__input" type="checkbox" checked name="extra" aria-label="Сахарозаменитель">
-              Сахарозаменитель
-            </label>
-          </li>
-          <li class="extra__item">
-            <label class="extra__label">
-              <input class="extra__input" type="checkbox" name="extra" aria-label="Питьевая вода">
-              Питьевая вода
-            </label>
-          </li>
-          <li class="extra__item">
-            <label class="extra__label">
-              <input class="extra__input" type="checkbox" name="extra" aria-label="Молоко">
-              Молоко
-            </label>
-          </li>
-          <li class="extra__item">
-            <label class="extra__label">
-              <input class="extra__input" type="checkbox" name="extra" aria-label="Витамины">
-              Витамины
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="form__button" type="submit">Отправить заявку</button>
-    </form>
-  </section>
-</main>
-<footer class="footer" id="footer">
-  <section class="address">
-    <div class="address__info">
-      <p class="address__offer">приглашаем к сотрудничеству дилеров!</p>
-      <p class="address__position">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-    </div>
-    <img src="https://via.placeholder.com/320x380" alt="Карта магазина по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="320" height="380">
-  </section>
-  <a href="#header__logo" class="logo-text">
-    <img src="https://via.placeholder.com/101x18" alt="Магазин Кэт энерджи" class="logo-text__img" width="101" height="18">
-  </a>
-  <ul class="social">
-    <li class="social__item">
-      <a href="#" class="social__link" aria-label="Интернет-магазин Кэт энерджи во вконтакте"></a>
-    </li>
-    <li class="social__item">
-      <a href="#" class="social__link" aria-label="Интернет-магазин Кэт энерджи в инстаграме"></a>
-    </li>
-    <li class="social__item">
-      <a href="#" class="social__link" aria-label="Интернет-магазин Кэт энерджи в фейсбуке"></a>
-    </li>
-  </ul>
-<div class="copyright">
-    <p class="copyright__text">HTML Academy</p>
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo" aria-label="Страница HTML Академии"></a>
-  </div>
-</footer>
-</body>
+        <div class="copyright">
+          <p class="copyright__text">HTML Academy</p>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo" aria-label="Страница HTML Академии"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

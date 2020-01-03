@@ -1,0 +1,80 @@
+.extra {
+  border: none;
+}
+
+.extra__title {
+  @include text-style-title;
+  text-transform: none;
+  margin-left: 6px;
+  position: relative;
+
+  &::after {
+    @include leaf-stripe;
+    width: 136px;
+    top: 11px;
+    left: 165px;
+  }
+}
+
+.extra__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 39px;
+}
+
+.extra__item {
+  margin-bottom: 24px;
+}
+
+.extra__label {
+  @include upper-16;
+}
+
+.extra__input:checked,
+.extra__input:not(:checked) {
+  appearance: none;
+}
+
+.extra__input:checked + .extra__label,
+.extra__input:not(:checked) + .extra__label {
+  @include label-position;
+  line-height: 17px;
+  padding-left: 50px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.extra__input:checked + .extra__label::before,
+.extra__input:not(:checked) + .extra__label::before {
+  @include input-border;
+  left: 4px;
+}
+
+.extra__input:checked:hover + .extra__label::before,
+.extra__input:not(:checked):hover + .extra__label::before {
+  border: 1px solid hsl(0, 0%, 73%);
+}
+
+
+.extra__input:checked + .extra__label::after,
+.extra__input:not(:checked) + .extra__label::after {
+  @include input-transition;
+  left: 9px;
+  top: -1px;
+  width: 18px;
+  height: 9px;
+  border-radius: 1px;
+  border-left: 2px solid hsl(97, 53%, 47%);
+  border-bottom: 2px solid hsl(97, 53%, 47%);
+  transform: rotate(-45deg);
+}
+
+.extra__input:not(:checked) + .extra__label::after {
+  opacity: 0;
+}
+
+.extra__input:checked + .extra__label::after {
+  opacity: 1;
+}

@@ -1,0 +1,29 @@
+.comment {
+  border: none;
+}
+
+.comment__title {
+  @include text-style-title;
+  text-transform: none;
+  margin-left: 6px;
+  margin-bottom: 31px;
+  position: relative;
+
+  &::after {
+    @include leaf-stripe;
+    width: 158px;
+    top: 11px;
+    left: 143px;
+  }
+}
+
+.comment__textarea {
+  @include upper-16;
+  margin-left: 7px;
+  margin-bottom: 19px;
+  padding-top: 12px;
+  padding-left: 15px;
+  width: 261px;
+  min-height: 134px;
+  resize: none;
+}
