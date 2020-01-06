@@ -1,0 +1,40 @@
+.form-title {
+  @include big-title;
+  text-align: center;
+  margin-right: 22px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  position: relative;
+
+  &::before {
+    @include catalog-stripe;
+    position: absolute;
+    top: -16px;
+    left: 0;
+  }
+}
+
+.form-text {
+  @include upper-14;
+  margin-left: 20px;
+  width: 226px;
+}
+
+.form__button {
+  @include catalog-btn;
+  @include upper-16;
+  @include green-btn-hover;
+  color: $white;
+  background-color: $leaf;
+  margin-top: 7px;
+  padding-left: 9px;
+}
+
+.form__required {
+  font-family: $arial;
+  font-size: 14px;
+  color: $dark-grey;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 31px;
+}

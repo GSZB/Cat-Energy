@@ -1,0 +1,72 @@
+.fitness {
+  border: none;
+  position: relative;
+  margin-bottom: 22px;
+
+  &::after {
+    @include catalog-stripe;
+    position: absolute;
+    bottom: 6px;
+    left: -2px;
+  }
+}
+
+.fitness__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 22px;
+  margin-left: 2px;
+}
+
+.fitness__item {
+  margin-bottom: 24px;
+}
+
+.fitness__label {
+  @include upper-16;
+  color: hsl(0, 0%, 13%);
+}
+
+.fitness__input:checked,
+.fitness__input:not(:checked) {
+  appearance: none;
+}
+
+.fitness__input:checked + .fitness__label,
+.fitness__input:not(:checked) + .fitness__label {
+  @include label-position;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.fitness__input:checked + .fitness__label::before,
+.fitness__input:not(:checked) + .fitness__label::before {
+  @include input-border;
+  border-radius: 100%;
+}
+
+.fitness__input:checked:hover + .fitness__label::before,
+.fitness__input:not(:checked):hover + .fitness__label::before {
+  border: 1px solid hsl(0, 0%, 73%);
+}
+
+.fitness__input:checked + .fitness__label::after,
+.fitness__input:not(:checked) + .fitness__label::after {
+  @include input-transition;
+  left: 11px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: hsl(97, 53%, 47%);
+}
+
+.fitness__input:not(:checked) + .fitness__label::after {
+  opacity: 0;
+}
+
+.fitness__input:checked + .fitness__label::after {
+  opacity: 1;
+}

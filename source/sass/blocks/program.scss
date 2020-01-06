@@ -1,0 +1,140 @@
+.program__btn {
+  @include white-text;
+  @include green-btn-hover;
+  margin: 0 auto;
+  margin-top: 135px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: hsl(97, 53%, 47%);
+  max-width: 280px;
+}
+
+.program__slim {
+  margin-top: 22px;
+  margin-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 20px;
+}
+
+.program__pro {
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+.program__slim,
+.program__pro {
+  background-color: $light-grey;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.program__slim-title,
+.program__pro-title {
+  @include text-style-title;
+  line-height: 37.02px;
+  text-align: center;
+  margin-left: 11px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: -5px;
+    left: 11px;
+    width: 50px;
+    height: 50px;
+    background-color: $leaf;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.program__pro-title {
+  margin-left: 38px;
+  margin-top: 29px;
+
+  &::before {
+    content: url("../../img/icon-cat-pro.svg");
+    position: absolute;
+    top: 4px;
+    left: -25px;
+    width: 67px;
+    height: 28px;
+    z-index: 2;
+  }
+
+  &::after {
+    left: -16px;
+    top: -6px;
+  }
+}
+
+.program__slim-text,
+.program__pro-text {
+  margin-left: 20px;
+  margin-top: 29px;
+  margin-bottom: 41px;
+  font-family: $arial;
+  letter-spacing: normal;
+  margin-right: 35px;
+  color: $dark-grey;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 112px;
+    left: 0;
+    width: 240px;
+    height: 1px;
+    background-color: hsla(0, 0%, 0%, 0.1);
+  }
+}
+
+.program__slim-title::before {
+  content: url("../../img/icon-cat-slim.svg");
+  position: absolute;
+  top: -8px;
+  left: 19px;
+  width: 35px;
+  height: 49px;
+  z-index: 2;
+}
+
+.program__slim-link,
+.program__pro-link {
+  @include upper-16;
+  text-decoration: none;
+  margin-left: 20px;
+  position: relative;
+
+  &::after {
+    content: url("../../img/icon-right-arrow-long.svg");
+    display: flex;
+    position: absolute;
+    top: 2px;
+    left: 97px;
+    width: 24px;
+    height: 11px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    content: url("../../img/icon-right-arrow-verylong.svg");
+    width: 33px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.1s ease;
+  }
+}
+
+.program__pro-link::after {
+  left: 95px;
+}

@@ -1,0 +1,74 @@
+.additional__title {
+  font-size: 24px;
+  color: $blacky;
+  line-height: 24px;
+  margin-left: 19px;
+  margin-top: 53px;
+  margin-bottom: 47px;
+  position: relative;
+
+  &::before {
+    @include leaf-stripe;
+    width: 53px;
+    top: 14px;
+    right: 0;
+  }
+
+  &::after {
+    @include catalog-stripe;
+    width: 280px;
+    top: 58px;
+    left: 0;
+  }
+}
+
+.additional__list {
+  list-style: none;
+  padding: 0;
+}
+
+.additional__item {
+  margin-left: 20px;
+  margin-right: 19px;
+  margin-bottom: 30px;
+  position: relative;
+
+  &::after {
+    @include catalog-stripe;
+    position: absolute;
+    width: 280px;
+    top: 116px;
+    left: 0;
+  }
+}
+
+.additional__heading {
+  @include upper-16;
+  color: hsl(0, 0%, 13%);
+  margin-bottom: 12px;
+  margin-left: 1px;
+}
+
+.additional__cover {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional__data {
+  font-family: $arial;
+  font-size: 14px;
+  color: $dark-grey;
+  line-height: 14px;
+}
+
+.additional__btn {
+  @include catalog-btn;
+  @include upper-16;
+  @include green-btn-hover;
+  text-decoration: none;
+  background-color: $leaf;
+  color: $white;
+  text-align: center;
+  margin: 0;
+  margin-top: 15px;
+}
