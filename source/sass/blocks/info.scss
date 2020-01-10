@@ -29,6 +29,7 @@
     left: -80px;
     background-color: $leaf;
   }
+
   &_leaf::after {
     content: url("../img/advantage-leaf@1x.png");
     display: flex;
@@ -38,6 +39,7 @@
     top: 3px;
     left: -75px;
   }
+
   &_dish::after {
     content: url("../img/advantage-powder@1x.png");
     display: flex;
@@ -47,6 +49,7 @@
     top: 2px;
     left: -75px;
   }
+
   &_fork::after {
     content: url("../img/advantage-dining@1x.png");
     display: flex;
@@ -56,6 +59,7 @@
     top: 3px;
     left: -76px;
   }
+
   &_clock::after {
     content: url("../img/advantage-clock@1x.png");
     display: flex;

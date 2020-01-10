@@ -3,7 +3,7 @@
   position: relative;
 
   &::before {
-    content: url('../img/icon-plus-mobile.svg');
+    content: url("../img/icon-plus-mobile.svg");
     position: absolute;
     display: block;
     width: 30px;
@@ -11,6 +11,7 @@
     top: -54px;
     left: 125px;
   }
+
   &::after {
     @include catalog-stripe;
     top: 128px;

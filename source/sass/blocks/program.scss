@@ -22,12 +22,14 @@
   background-color: $light-grey;
   margin-left: -20px;
   min-width: 280px;
+
   &_slim {
     margin-top: 22px;
     margin-bottom: 20px;
     padding-top: 6px;
     padding-bottom: 20px;
   }
+
   &_pro {
     padding-top: 1px;
     padding-bottom: 20px;
@@ -133,6 +135,7 @@
     opacity: 0.3;
     transition: 0.1s ease;
   }
+
   &_pro::after {
     left: 95px;
   }

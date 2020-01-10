@@ -30,18 +30,21 @@
 
 .social__link {
   display: flex;
+
   &_vk {
     width: 22px;
     height: 12px;
     margin-top: 4px;
     background: url("../img/icon-vk.svg") no-repeat;
   }
+
   &_insta {
     width: 16px;
     height: 16px;
     margin-top: 2px;
     background: url("../img/icon-insta.svg") no-repeat;
   }
+
   &_fb {
     width: 10px;
     height: 19px;
