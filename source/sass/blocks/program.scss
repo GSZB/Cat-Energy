@@ -1,38 +1,40 @@
+.program {
+  @include container-mobile;
+}
+
 .program__btn {
   @include white-text;
   @include green-btn-hover;
   margin: 0 auto;
   margin-top: 135px;
   padding-top: 11px;
+  margin-bottom: 20px;
   padding-bottom: 11px;
   display: flex;
   justify-content: center;
   text-decoration: none;
   background-color: hsl(97, 53%, 47%);
-  max-width: 280px;
+  width: 280px;
+  margin-left: -20px;
 }
 
-.program__slim {
-  margin-top: 22px;
-  margin-bottom: 20px;
-  padding-top: 6px;
-  padding-bottom: 20px;
-}
-
-.program__pro {
-  padding-top: 1px;
-  padding-bottom: 20px;
-}
-
-.program__slim,
-.program__pro {
+.program__block {
   background-color: $light-grey;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: -20px;
+  min-width: 280px;
+  &_slim {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    padding-top: 6px;
+    padding-bottom: 20px;
+  }
+  &_pro {
+    padding-top: 1px;
+    padding-bottom: 20px;
+  }
 }
 
-.program__slim-title,
-.program__pro-title {
+.program__title {
   @include text-style-title;
   line-height: 37.02px;
   text-align: center;
@@ -53,12 +55,12 @@
   }
 }
 
-.program__pro-title {
+.program__title_pro {
   margin-left: 38px;
   margin-top: 29px;
 
   &::before {
-    content: url("../../img/icon-cat-pro.svg");
+    content: url("../img/icon-cat-pro.svg");
     position: absolute;
     top: 4px;
     left: -25px;
@@ -73,8 +75,7 @@
   }
 }
 
-.program__slim-text,
-.program__pro-text {
+.program__text {
   margin-left: 20px;
   margin-top: 29px;
   margin-bottom: 41px;
@@ -96,8 +97,8 @@
   }
 }
 
-.program__slim-title::before {
-  content: url("../../img/icon-cat-slim.svg");
+.program__title_slim::before {
+  content: url("../img/icon-cat-slim.svg");
   position: absolute;
   top: -8px;
   left: 19px;
@@ -106,15 +107,14 @@
   z-index: 2;
 }
 
-.program__slim-link,
-.program__pro-link {
+.program__link {
   @include upper-16;
   text-decoration: none;
   margin-left: 20px;
   position: relative;
 
   &::after {
-    content: url("../../img/icon-right-arrow-long.svg");
+    content: url("../img/icon-right-arrow-long.svg");
     display: flex;
     position: absolute;
     top: 2px;
@@ -125,7 +125,7 @@
 
   &:hover::after,
   &:focus::after {
-    content: url("../../img/icon-right-arrow-verylong.svg");
+    content: url("../img/icon-right-arrow-verylong.svg");
     width: 33px;
   }
 
@@ -133,8 +133,7 @@
     opacity: 0.3;
     transition: 0.1s ease;
   }
-}
-
-.program__pro-link::after {
-  left: 95px;
+  &_pro::after {
+    left: 95px;
+  }
 }

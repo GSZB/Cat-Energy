@@ -1,7 +1,10 @@
-.form-title {
+.form {
+  @include container-mobile;
+}
+
+.page-form__title {
+  @include container-mobile;
   @include big-title;
-  text-align: center;
-  margin-right: 22px;
   margin-top: 15px;
   margin-bottom: 25px;
   position: relative;
@@ -14,13 +17,14 @@
   }
 }
 
-.form-text {
+.page-form__text {
+  @include container-mobile;
   @include upper-14;
-  margin-left: 20px;
-  width: 226px;
+  width: 271px;
+  padding-left: 12px;
 }
 
-.form__button {
+.page-form__button {
   @include catalog-btn;
   @include upper-16;
   @include green-btn-hover;
@@ -30,7 +34,7 @@
   padding-left: 9px;
 }
 
-.form__required {
+.page-form__required {
   font-family: $arial;
   font-size: 14px;
   color: $dark-grey;

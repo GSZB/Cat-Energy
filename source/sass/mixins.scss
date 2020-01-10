@@ -86,7 +86,7 @@
 @mixin label-position {
   display: inline-block;
   position: relative;
-  padding-left: 48px;
+  padding-left: 28px;
   line-height: 19px;
   cursor: pointer;
 }
@@ -94,7 +94,7 @@
 @mixin input-border {
   content: "";
   position: absolute;
-  left: 2px;
+  left: -17px;
   top: -6px;
   width: 28px;
   height: 28px;
@@ -137,15 +137,8 @@
   }
 }
 
-@mixin footer-icon-hover {
-  filter: invert(40%) sepia(0%) saturate(2807%) hue-rotate(161deg) brightness(82%) contrast(60%);
-
-  &:hover,
-  &:focus {
-    filter: invert(61%) sepia(65%) saturate(434%) hue-rotate(54deg) brightness(90%) contrast(93%);
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+@mixin container-mobile {
+    max-width: 280px;
+    margin: auto;
+    padding: 0 20px;
 }

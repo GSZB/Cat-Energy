@@ -1,10 +1,9 @@
 .intro {
-  background-color: #68b738;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  @include container-mobile;
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   padding-top: 27px;
   position: relative;
-  padding-bottom: 153px;
 }
 
 .intro__title {
@@ -19,6 +18,7 @@
   @include white-text;
   line-height: 14px;
   margin-top: 25px;
+  margin-bottom: 302px;
 }
 
 .intro__img {

@@ -1,3 +1,7 @@
+.order {
+  @include container-mobile;
+}
+
 .order__img {
   display: flex;
   margin: 0 auto;
@@ -9,14 +13,13 @@
   position: relative;
 
   &::before {
-    content: url("../../img/icon-gift.svg");
-    filter: invert(97%) sepia(23%) saturate(0%) hue-rotate(340deg) brightness(114%) contrast(106%);
+    content: url("../img/icon-gift.svg");
     display: block;
     width: 55px;
     height: 60px;
     position: absolute;
     top: 65px;
-    left: 133px;
+    left: 113px;
   }
 }
 
@@ -30,5 +33,5 @@
   width: 161px;
   height: 60px;
   top: 171px;
-  left: 79px;
+  left: 59px;
 }

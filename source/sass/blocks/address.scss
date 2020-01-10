@@ -1,0 +1,50 @@
+.address {
+    margin-left: -20px;
+    min-width: 320px;
+  }
+  
+  .address__info {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    &_catalog,
+    &_form {
+      background: $light-grey;
+    }
+  }
+  
+  .address__offer {
+    @include upper-16;
+    line-height: 20px;
+    margin-top: 28px;
+    min-width: 124px;
+    margin-left: 19px;
+  }
+  
+  .address__position {
+    font-family: $arial;
+    color: $dark-grey;
+    line-height: 20px;
+    margin-left: 18px;
+    margin-top: 28px;
+    font-style: normal;
+  }
+  
+  .address__img {
+    margin-bottom: -3px;
+  }
+  
+  .address__overlay {
+    position: relative;
+  
+    &::after {
+      content: url("../img/pin-new.png");
+      position: absolute;
+      width: 55px;
+      height: 53px;
+      display: block;
+      top: 139px;
+      left: 129px;
+    }
+  }
+  
