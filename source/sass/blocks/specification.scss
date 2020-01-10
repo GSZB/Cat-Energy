@@ -1,0 +1,23 @@
+.specification__parameters {
+  border-collapse: collapse;
+}
+
+.specification__title {
+  @include upper-16;
+  width: 74px;
+  margin-top: 26px;
+  line-height: 20px;
+  margin-bottom: 13px;
+}
+
+.specification__row {
+  width: 141px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.specification__unit {
+  font-size: 12px;
+  font-family: $arial;
+  line-height: 14px;
+}

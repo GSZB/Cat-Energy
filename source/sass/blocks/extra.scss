@@ -1,18 +1,19 @@
 .extra {
   border: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .extra__title {
   @include text-style-title;
   text-transform: none;
-  margin-left: 6px;
   position: relative;
 
   &::after {
     @include leaf-stripe;
     width: 136px;
     top: 11px;
-    left: 165px;
+    left: 164px;
   }
 }
 
@@ -39,7 +40,7 @@
 .extra__input:not(:checked) + .extra__label {
   @include label-position;
   line-height: 17px;
-  padding-left: 50px;
+  padding-left: 43px;
 
   &:active {
     opacity: 0.3;
@@ -49,7 +50,7 @@
 .extra__input:checked + .extra__label::before,
 .extra__input:not(:checked) + .extra__label::before {
   @include input-border;
-  left: 4px;
+  left: -3px;
 }
 
 .extra__input:checked:hover + .extra__label::before,
@@ -61,7 +62,7 @@
 .extra__input:checked + .extra__label::after,
 .extra__input:not(:checked) + .extra__label::after {
   @include input-transition;
-  left: 9px;
+  left: 3px;
   top: -1px;
   width: 18px;
   height: 9px;
