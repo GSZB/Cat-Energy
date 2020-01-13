@@ -1,4 +1,5 @@
 .results {
+  @include container-mobile;
   background-color: $light-grey;
   position: relative;
   padding-bottom: 21px;
@@ -7,15 +8,13 @@
 
 .results__title {
   @include big-title;
-  margin-left: 20px;
   margin-bottom: 23px;
   margin-top: 0;
 }
 
 .results__text {
   font-family: $arial;
-  margin-left: 20px;
-  margin-right: 21px;
+  margin-right: 14px;
   margin-bottom: 1px;
 }
 
@@ -62,75 +61,6 @@
   margin-bottom: 34px;
 }
 
-.switch {
-  display: flex;
-  justify-content: space-around;
-}
-
-.switch__text {
-  @include upper-16;
-  margin-top: 30px;
-}
-
-.switch__text_left {
-  margin-left: 17%;
-}
-
-.switch__text_right {
-  margin-right: 16%;
-}
-
-.switch__btn {
-  position: relative;
-  display: inline-block;
-  width: 84px;
-  height: 14px;
-  margin-top: 32px;
-  margin-right: 2px;
-}
-
-.switch__input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.switch__slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: hsl(0, 0%, 100%);
-  border: 1px solid hsl(0, 0%, 80%);
-  transition: 0.4s;
-}
-
-.switch__slider::before {
-  position: absolute;
-  content: "";
-  height: 6px;
-  width: 35px;
-  left: 6px;
-  bottom: 3px;
-  background-color: $leaf;
-  transition: 0.4s;
-}
-
-.switch__input:checked + .switch__slider {
-  background-color: hsl(0, 0%, 100%);
-}
-
-.switch__input:checked + .switch__slider::before {
-  transform: translateX(36px);
-}
-
-/* Rounded sliders */
-.switch__slider.round {
-  border-radius: 34px;
-}
-
-.switch__slider.round::before {
-  border-radius: 3px;
+.results__img {
+  margin-left: -20px;
 }

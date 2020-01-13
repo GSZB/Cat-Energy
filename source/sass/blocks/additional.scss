@@ -1,8 +1,11 @@
+.additional {
+  @include container-mobile;
+}
+
 .additional__title {
   font-size: 24px;
   color: $blacky;
   line-height: 24px;
-  margin-left: 19px;
   margin-top: 53px;
   margin-bottom: 47px;
   position: relative;
@@ -11,7 +14,7 @@
     @include leaf-stripe;
     width: 53px;
     top: 14px;
-    right: 0;
+    right: -20px;
   }
 
   &::after {
@@ -25,11 +28,10 @@
 .additional__list {
   list-style: none;
   padding: 0;
+  min-width: 282px;
 }
 
 .additional__item {
-  margin-left: 20px;
-  margin-right: 19px;
   margin-bottom: 30px;
   position: relative;
 

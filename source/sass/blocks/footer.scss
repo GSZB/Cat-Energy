@@ -1,57 +1,18 @@
-.address__info {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 10px;
+.footer {
+  @include container-mobile;
 }
 
-.address__info_catalog,
-.address__info_form {
-  background: $light-grey;
-}
-
-.address__offer {
-  @include upper-16;
-  line-height: 20px;
-  margin-top: 28px;
-  min-width: 124px;
-  margin-left: 19px;
-}
-
-.address__position {
-  font-family: $arial;
-  color: $dark-grey;
-  line-height: 20px;
-  margin-left: 18px;
-  margin-top: 28px;
-}
-
-.address__img {
-  margin-bottom: -3px;
-}
-
-.address__overlay {
-  position: relative;
-
-  &::after {
-    content: url("../../img/pin-new.png");
-    position: absolute;
-    width: 55px;
-    height: 53px;
-    display: block;
-    top: 139px;
-    left: 129px;
-  }
-}
-
-.logo__footer {
+.footer__logo {
   display: flex;
   justify-content: center;
   padding-top: 38px;
   padding-bottom: 40px;
   background: $light-grey;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
-.logo-text__img {
+.footer__img {
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -60,82 +21,4 @@
   &:active {
     opacity: 0.6;
   }
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  position: relative;
-  padding-bottom: 35px;
-  background: $light-grey;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 14px;
-
-  &::before {
-    @include footer-stripes;
-    top: -9px;
-  }
-
-  &::after {
-    @include footer-stripes;
-    top: 54px;
-  }
-}
-
-.social__item {
-  margin-right: 24px;
-  margin-left: 14px;
-}
-
-.social__link {
-  @include footer-icon-hover;
-  display: flex;
-}
-
-.social__link_vk {
-  width: 22px;
-  height: 12px;
-  margin-top: 4px;
-  background: url("../../img/icon-vk.svg") no-repeat;
-}
-
-.social__link_insta {
-  width: 16px;
-  height: 16px;
-  margin-top: 2px;
-  background: url("../../img/icon-insta.svg") no-repeat;
-}
-
-.social__link_fb {
-  width: 10px;
-  height: 19px;
-  background: url("../../img/icon-fb.svg") no-repeat;
-}
-
-.copyright {
-  display: flex;
-  background: $light-grey 320px 300px;
-  padding-bottom: 15px;
-}
-
-.copyright__text {
-  font-family: $arial;
-  font-size: 16px;
-  color: $dark-grey;
-  margin-left: 19px;
-  display: inline-block;
-}
-
-.copyright__logo {
-  @include footer-icon-hover;
-  width: 41px;
-  height: 41px;
-  background: url("../../img/htmlacademy.svg") no-repeat;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: 13px;
-  margin-top: 6px;
 }

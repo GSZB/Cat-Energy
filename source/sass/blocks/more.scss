@@ -1,0 +1,65 @@
+.more {
+  margin-top: 105px;
+  position: relative;
+
+  &::before {
+    content: url("../img/icon-plus-mobile.svg");
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: -54px;
+    left: 125px;
+  }
+
+  &::after {
+    @include catalog-stripe;
+    top: 128px;
+    left: -20px;
+  }
+}
+
+.more__btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../img/icon-plus-mobile.svg");
+  border: none;
+  margin: 0 auto;
+  margin-top: 51px;
+}
+
+.more__title {
+  @include upper-16;
+  text-align: center;
+  margin-top: 24px;
+  margin-left: 2px;
+  margin-bottom: 9px;
+}
+
+.more__text {
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-grey;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+.more__show {
+  @include catalog-btn;
+  @include upper-16;
+  background-color: hsl(0, 0%, 95%);
+  color: $dark-grey;
+  padding-left: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: hsl(0, 0%, 92%);
+  }
+
+  &:active {
+    color: hsla(0, 0%, 27%, 0.3);
+  }
+}

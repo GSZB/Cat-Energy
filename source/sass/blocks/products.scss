@@ -1,7 +1,10 @@
+.products {
+  @include container-mobile;
+}
+
 .products__title {
   @include big-title;
   margin-top: 15px;
-  margin-left: 20px;
   position: relative;
 
   &::before {
@@ -28,7 +31,7 @@
   &::after {
     @include catalog-stripe;
     top: 213px;
-    left: 0;
+    left: -20px;
   }
 }
 
@@ -37,32 +40,7 @@
 }
 
 .products__pic {
-  margin-left: 20px;
   margin-top: 5px;
-}
-
-.specification__parameters {
-  border-collapse: collapse;
-}
-
-.specification__title {
-  @include upper-16;
-  width: 74px;
-  margin-top: 26px;
-  line-height: 20px;
-  margin-bottom: 13px;
-}
-
-.specification__row {
-  width: 141px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.specification__unit {
-  font-size: 12px;
-  font-family: $arial;
-  line-height: 14px;
 }
 
 .products__btn {
@@ -72,58 +50,4 @@
   background-color: $leaf;
   color: $white;
   margin-bottom: 20px;
-}
-
-.more {
-  position: relative;
-
-  &::after {
-    @include catalog-stripe;
-    top: 182px;
-    left: 0;
-  }
-}
-
-.more__btn {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background: url("../../img/icon-plus-mobile.svg");
-  border: none;
-  margin: 0 auto;
-  margin-top: 51px;
-}
-
-.more__title {
-  @include upper-16;
-  text-align: center;
-  margin-top: 24px;
-  margin-left: 2px;
-  margin-bottom: 9px;
-}
-
-.more__text {
-  font-family: $arial;
-  font-size: 12px;
-  line-height: 16px;
-  color: $dark-grey;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 21px;
-}
-
-.more__show {
-  @include catalog-btn;
-  @include upper-16;
-  background-color: hsl(0, 0%, 95%);
-  color: $dark-grey;
-
-  &:hover,
-  &:focus {
-    background-color: hsl(0, 0%, 92%);
-  }
-
-  &:active {
-    color: hsla(0, 0%, 27%, 0.3);
-  }
 }

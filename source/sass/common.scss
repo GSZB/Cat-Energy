@@ -6,6 +6,7 @@ body {
   font-weight: 400;
   line-height: 18px;
   color: hsl(0, 0%, 27%);
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -17,9 +18,4 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.container {
-  width: 320px;
-  position: relative;
 }

@@ -1,0 +1,26 @@
+.copyright {
+  display: flex;
+  background: $light-grey 320px 300px;
+  padding-bottom: 15px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.copyright__text {
+  font-family: $arial;
+  font-size: 16px;
+  color: $dark-grey;
+  margin-left: 19px;
+  display: inline-block;
+}
+
+.copyright__logo {
+  @include footer-icon-hover;
+  width: 41px;
+  height: 41px;
+  background: url("../img/htmlacademy.svg") no-repeat;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 13px;
+  margin-top: 6px;
+}
