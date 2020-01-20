@@ -51,3 +51,48 @@
     background: url("../img/icon-fb.svg") no-repeat;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-right: 0;
+    margin-top: 43px;
+    margin-left: 37px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .social__item {
+    margin-right: 14px;
+  }
+
+  .footer__logo {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 31px;
+    padding-top: 60px;
+  }
+
+  .social__link_vk {
+    width: 30px;
+    height: 17px;
+  }
+
+  .social__link_insta {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__link_fb {
+    width: 15px;
+    height: 27px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    margin-top: 46px;
+  }
+}

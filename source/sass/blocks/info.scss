@@ -1,5 +1,5 @@
 .info {
-  @include container-mobile;
+  @include container;
   padding-bottom: 20px;
 }
 
@@ -60,7 +60,8 @@
     left: -76px;
   }
 
-  &_clock::after {
+  &_clock::after,
+  &_change-text::after {
     content: url("../img/advantage-clock@1x.png");
     display: flex;
     width: 26px;
@@ -68,5 +69,116 @@
     position: absolute;
     top: 3px;
     left: -75px;
+  }
+
+  &_change-text {
+    display: none;
+  }
+}
+
+.info__number {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .info {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 735px;
+      left: 0;
+      background-color: $blacky;
+      opacity: 0.1;
+    }
+  }
+
+  .info__title {
+    font-size: 60px;
+    margin-left: 30px;
+    margin-top: 45px;
+  }
+
+  .info__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 110px;
+    margin-top: 74px;
+    justify-content: space-between;
+    margin-bottom: 11px;
+  }
+
+  .info__item {
+    position: relative;
+    font-size: 16px;
+    width: 39%;
+    margin-top: 110px;
+    line-height: 1.5;
+    margin-bottom: 135px;
+    margin-left: -80px;
+    margin-right: 98px;
+
+    &_clock {
+      display: none;
+    }
+
+    &_change-text {
+      display: block;
+    }
+
+    &::after {
+      top: -97px;
+      left: 15px;
+    }
+
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: -112px;
+      left: 0;
+    }
+  }
+
+  .info__number {
+    display: flex;
+    position: absolute;
+    font-size: 281px;
+    font-family: $main-text;
+    top: -221px;
+    opacity: 0.1;
+
+    &_leaf {
+      left: 118px;
+    }
+
+    &_dish {
+      left: 111px;
+    }
+
+    &_fork,
+    &_change-text {
+      left: 113px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info {
+    margin-left: 80px;
+  }
+
+  .info__title {
+    margin-top: 44px;
+  }
+
+  .info__item {
+    width: 20%;
+    margin-right: 105px;
+    margin-bottom: 115px;
   }
 }

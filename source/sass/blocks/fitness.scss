@@ -7,7 +7,8 @@
     @include catalog-stripe;
     position: absolute;
     bottom: 6px;
-    left: -22px;
+    left: 0;
+    width: 100%;
   }
 }
 
@@ -20,6 +21,7 @@
 
 .fitness__item {
   margin-bottom: 24px;
+  margin-left: 20px;
 }
 
 .fitness__label {
@@ -55,7 +57,7 @@
 .fitness__input:checked + .fitness__label::after,
 .fitness__input:not(:checked) + .fitness__label::after {
   @include input-transition;
-  left: -8px;
+  left: -14px;
   top: 3px;
   width: 12px;
   height: 12px;
@@ -69,4 +71,54 @@
 
 .fitness__input:checked + .fitness__label::after {
   opacity: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .fitness {
+    border: 1px solid hsla(0, 0%, 0%, 0.2);
+    margin-left: 71px;
+    margin-right: 67px;
+    margin-top: 43px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .fitness__list {
+    margin-top: 29px;
+  }
+
+  .fitness__item {
+    margin-bottom: 32px;
+
+    &_last {
+      margin-bottom: 25px;
+    }
+  }
+
+  .fitness__label {
+    font-size: 20px;
+    margin-left: 23px;
+  }
+
+  .fitness__input:checked + .fitness__label::after,
+  .fitness__input:not(:checked) + .fitness__label::after {
+    width: 18px;
+    height: 18px;
+    left: -26px;
+    top: 1px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fitness {
+    margin-left: 13px;
+    margin-top: 66px;
+    align-self: baseline;
+  }
+
+  .fitness__item {
+    margin-right: 241px;
+  }
 }

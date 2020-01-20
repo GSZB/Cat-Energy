@@ -1,5 +1,5 @@
 .order {
-  @include container-mobile;
+  @include container;
 }
 
 .order__img {
@@ -34,4 +34,48 @@
   height: 60px;
   top: 171px;
   left: 59px;
+}
+
+@media (min-width: $tablet-width) {
+  .order__img {
+    width: 92.2%;
+    height: 200px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+    margin-left: 31px;
+  }
+
+  .order__overlay::before {
+    left: 122px;
+  }
+
+  .order__text {
+    text-align: left;
+    top: 56px;
+    left: 454px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order {
+    margin-top: 175px;
+    margin-right: 110px;
+  }
+
+  .order__overlay::before {
+    left: 127px;
+  }
+
+  .order__img {
+    width: 245px;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .order__text {
+    left: 73px;
+    text-align: center;
+    top: 171px;
+  }
 }

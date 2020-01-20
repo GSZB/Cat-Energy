@@ -1,18 +1,22 @@
 .switch {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 11px;
 }
 
 .switch__text {
   @include upper-16;
-  margin-top: 30px;
+  margin-top: 26px;
+  border: none;
+  background: transparent;
+  font-family: $main-text;
 
   &_left {
-    margin-left: 13%;
+    margin-left: 11%;
   }
 
   &_right {
-    margin-right: 11%;
+    margin-right: 9%;
   }
 }
 
@@ -69,4 +73,85 @@
 
 .switch__slider.round::before {
   border-radius: 3px;
+}
+
+.switch__slipper {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .switch {
+    background: linear-gradient(to right, $light-grey 50%, hsl(0, 0%, 92%) 50%);
+    padding-bottom: 68px;
+    width: 100%;
+  }
+
+  .switch__text {
+    font-size: 20px;
+    margin-top: 10px;
+
+    &_left {
+      margin-left: 11%;
+    }
+
+    &_right {
+      margin-right: 11%;
+    }
+  }
+
+  .switch__btn {
+    display: none;
+  }
+
+  .switch__slipper {
+    display: block;
+    position: relative;
+    width: 428px;
+    height: 6px;
+    margin: 0;
+    border: none;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+    margin-top: 24px;
+  }
+
+  .switch__slipper-btn {
+    position: absolute;
+    background-color: $leaf;
+    cursor: pointer;
+    top: -15px;
+    left: calc(50% - 15px);
+    width: 34px;
+    height: 34px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 #cdcdcd, inset 0 0 0 12px $white;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 #cdcdcd, inset 0 0 0 12px $white;
+    }
+
+    &:active {
+      border: 2px solid $leaf;
+      box-shadow: 0 4px 5px 0 #cdcdcd, inset 0 0 0 11px $white;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .switch {
+    background: linear-gradient(to right, $light-grey 51%, hsl(0, 0%, 92%) 51%);
+    width: 100%;
+    padding-top: 21px;
+  }
+
+  .switch__text {
+    &_left {
+      margin-left: 13.5%;
+    }
+
+    &_right {
+      margin-right: 12%;
+    }
+  }
 }

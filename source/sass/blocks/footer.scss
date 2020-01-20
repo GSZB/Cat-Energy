@@ -1,5 +1,5 @@
 .footer {
-  @include container-mobile;
+  @include container;
 }
 
 .footer__logo {
@@ -20,5 +20,28 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: $light-grey;
+    padding-bottom: 14px;
+  }
+
+  .footer__logo {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 31px;
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__img {
+    margin-left: 79px;
+    margin-top: 3px;
   }
 }
