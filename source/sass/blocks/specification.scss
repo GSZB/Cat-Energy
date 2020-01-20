@@ -4,6 +4,7 @@
 
 .specification__title {
   @include upper-16;
+  font-weight: 400;
   width: 74px;
   margin-top: 26px;
   line-height: 20px;
@@ -20,4 +21,79 @@
   font-size: 12px;
   font-family: $arial;
   line-height: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .specification__title {
+    font-size: 20px;
+    text-align: center;
+    min-width: 133px;
+    margin: 0 auto;
+    padding-left: 3px;
+    margin-top: 33px;
+  }
+
+  .specification__unit {
+    font-size: 16px;
+    color: $dark-grey;
+
+    &::before {
+      @include catalog-stripe;
+      width: 249px;
+      top: 285px;
+      left: 39px;
+      background-color: $dark-grey;
+      opacity: 0.05;
+    }
+
+    &::after {
+      @include catalog-stripe;
+      width: 249px;
+      top: 253px;
+      left: 39px;
+      background-color: $dark-grey;
+      opacity: 0.05;
+    }
+  }
+
+  .specification__parameters {
+    width: 77%;
+    margin-left: 39px;
+    margin-top: 27px;
+  }
+
+  .specification__row {
+    width: 100%;
+    margin-bottom: 16px;
+
+    &::before {
+      @include catalog-stripe;
+      width: 249px;
+      top: 317px;
+      left: 39px;
+      background-color: $dark-grey;
+      opacity: 0.1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .specification__parameters {
+    margin-left: 37px;
+  }
+
+  .specification__row {
+    width: 90%;
+
+    &::before {
+      width: 168px;
+    }
+  }
+
+  .specification__unit {
+    &::after,
+    &::before {
+      width: 168px;
+    }
+  }
 }

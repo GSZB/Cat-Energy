@@ -52,7 +52,7 @@
   @include upper-16;
   background-color: hsl(0, 0%, 95%);
   color: $dark-grey;
-  padding-left: 10px;
+  font-family: $main-text;
 
   &:hover,
   &:focus {
@@ -61,5 +61,79 @@
 
   &:active {
     color: hsla(0, 0%, 27%, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more {
+    border: 1px solid $light-grey;
+    margin-top: 137px;
+    align-self: baseline;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: url("../img/icon-plus.svg");
+      width: 60px;
+      height: 60px;
+      top: 54px;
+      left: 133px;
+    }
+  }
+
+  .more__title {
+    font-size: 20px;
+    max-width: 134px;
+    margin-top: 163px;
+    line-height: 1;
+    margin-left: 96px;
+    margin-right: 94px;
+  }
+
+  .more__text {
+    font-size: 16px;
+    max-width: 167px;
+    margin-top: 25px;
+    margin-left: 79px;
+    line-height: 1.2;
+  }
+
+  .more__show {
+    margin-top: 85px;
+    width: 249px;
+    margin-right: 37px;
+    padding-left: 6px;
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more {
+    margin-top: 143px;
+    margin-right: 37px;
+    margin-left: 39px;
+    padding-left: 0;
+
+    &::before {
+      left: 92px;
+    }
+  }
+
+  .more__title {
+    margin: 0 auto;
+    margin-top: 163px;
+  }
+
+  .more__text {
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  .more__show {
+    width: 169px;
+    margin-right: 39px;
+    margin-left: 39px;
   }
 }

@@ -1,4 +1,5 @@
 .address {
+  @include container;
   margin-left: -20px;
   min-width: 320px;
 }
@@ -19,7 +20,6 @@
   line-height: 20px;
   margin-top: 28px;
   min-width: 124px;
-  margin-left: 19px;
 }
 
 .address__position {
@@ -33,6 +33,7 @@
 
 .address__img {
   margin-bottom: -3px;
+  margin-left: -20px;
 }
 
 .address__overlay {
@@ -43,8 +44,110 @@
     position: absolute;
     width: 55px;
     height: 53px;
-    display: block;
-    top: 139px;
-    left: 129px;
+    display: flex;
+    z-index: 1;
+    top: -204px;
+    left: 109px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .address {
+    margin-top: 37px;
+  }
+
+  .address-grey {
+    background-color: $light-grey;
+    padding-top: 37px;
+    margin-top: 59px;
+  }
+
+  .address__info {
+    justify-content: space-between;
+  }
+
+  .address__offer {
+    font-size: 20px;
+    margin-left: 71px;
+    line-height: 1.25;
+    max-width: 154px;
+  }
+
+  .address__position {
+    font-size: 16px;
+    max-width: 155px;
+    text-align: end;
+    margin-right: 71px;
+    margin-top: 26px;
+
+    &_city {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  .address__overlay {
+    margin-top: 31px;
+
+    &::after {
+      width: 113px;
+      height: 106px;
+      content: url("../img/map-pin.png");
+      top: -232px;
+      left: 322px;
+    }
+
+    &_form::after {
+      top: -234px;
+    }
+  }
+
+  .address__img {
+    width: 100%;
+    margin-top: 31px;
+    height: 400px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    position: relative;
+    margin-top: 0;
+  }
+
+  .address-grey {
+    padding-top: 0;
+  }
+
+  .address__img {
+    margin-top: 0;
+  }
+
+  .address__info {
+    position: absolute;
+    background: $white;
+    width: 570px;
+    display: flex;
+    z-index: 1;
+    left: 110px;
+    top: 95px;
+  }
+
+  .address__offer {
+    margin-left: 76px;
+    margin-top: 65px;
+    margin-bottom: 51px;
+  }
+
+  .address__position {
+    text-align: left;
+    margin-top: 63px;
+    margin-right: 89px;
+  }
+
+  .address__overlay::after {
+    top: -230px;
+    left: 998px;
   }
 }

@@ -23,3 +23,29 @@
   margin-right: 13px;
   margin-top: 6px;
 }
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .copyright__text {
+    width: 114px;
+    margin-top: 61px;
+    margin-right: 15px;
+  }
+
+  .copyright__logo {
+    margin-right: 23px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    margin-right: 80px;
+    margin-top: 5px;
+  }
+}
+

@@ -1,7 +1,16 @@
 .owner {
   border: none;
   padding-left: 0;
-  margin-left: 0;
+  padding-right: 0;
+  margin-left: 20px;
+  position: relative;
+
+  &::after {
+    @include leaf-stripe;
+    width: 100%;
+    top: 14px;
+    z-index: 1;
+  }
 }
 
 .owner__title {
@@ -10,13 +19,10 @@
   position: relative;
   margin-bottom: 14px;
   line-height: 24px;
-
-  &::after {
-    @include leaf-stripe;
-    width: 99px;
-    top: 14px;
-    right: -20px;
-  }
+  margin-left: -3px;
+  z-index: 2;
+  max-width: 204px;
+  background: $white;
 }
 
 .owner__list {
@@ -45,6 +51,7 @@
 .owner__input {
   @include upper-16;
   @include input-hover;
+  font-family: $main-text;
   margin-top: 1px;
   padding-left: 14px;
   padding-top: 11px;
@@ -63,5 +70,99 @@
     background: url("../img/icon-phone.svg") no-repeat 94% 50%;
     background-size: 20px 20px;
     width: 204px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .owner {
+    margin-top: 81px;
+    margin-left: 0;
+
+    &::after {
+      top: 16px;
+    }
+  }
+
+  .owner__title {
+    font-size: 36px;
+    padding-right: 42px;
+    margin-left: 30px;
+    padding-left: 39px;
+    min-width: 593px;
+  }
+
+  .owner__list {
+    margin-top: 61px;
+  }
+
+  .owner__item {
+    margin-bottom: 20px;
+  }
+
+  .owner__label {
+    font-size: 20px;
+    margin-left: 71px;
+    margin-right: 21px;
+
+    &_second {
+      margin-left: 68px;
+      margin-right: 16px;
+    }
+  }
+
+  .owner__input {
+    flex-grow: 1;
+    margin-right: 63px;
+    font-size: 20px;
+    padding-left: 20px;
+    height: 52px;
+
+    &_email {
+      background: url("../img/icon-mail.svg") no-repeat 96.4% 55%;
+      background-size: 17px 14px;
+    }
+
+    &_phone {
+      background: url("../img/icon-phone.svg") no-repeat 97% 55%;
+      background-size: 20px 20px;
+      margin-right: 64px;
+      padding-left: 19px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .owner {
+    margin-top: 46px;
+  }
+
+  .owner__title {
+    margin-left: 70px;
+
+    &::before {
+      width: 70px;
+      left: -107px;
+    }
+
+    &::after {
+      width: 776px;
+      right: -816px;
+    }
+  }
+
+  .owner__list {
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .owner__input {
+    &_email {
+      width: 486px;
+      margin-right: 10px;
+    }
+
+    &_phone {
+      width: 472px;
+    }
   }
 }
