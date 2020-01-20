@@ -148,13 +148,11 @@
 
   @media (min-width: $tablet-width) {
     max-width: 768px;
-    margin: auto;
     padding: 0 calc(50% - 768px);
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1440px;
-    margin: auto;
+    max-width: 1300px;
     padding: 0 calc(50% - 1440px);
   }
 }

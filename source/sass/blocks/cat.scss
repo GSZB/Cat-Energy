@@ -9,8 +9,7 @@
     @include catalog-stripe;
     position: absolute;
     bottom: -1px;
-    left: 0;
-    width: 100%;
+    left: -20px;
   }
 }
 
@@ -28,7 +27,6 @@
 .cat__label {
   @include upper-16;
   color: hsl(0, 0%, 13%);
-  margin-left: 20px;
 
   &_name {
     margin-right: 15px;
@@ -46,7 +44,6 @@
 .cat__input {
   @include upper-16;
   @include input-hover;
-  font-family: $main-text;
   padding-left: 14px;
   padding-top: 12px;
   padding-bottom: 13px;
@@ -65,44 +62,5 @@
 
   &_age {
     width: 172px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .cat::after {
-    display: none;
-  }
-
-  .cat__list {
-    margin-top: 41px;
-  }
-
-  .cat__label {
-    font-size: 20px;
-    margin-left: 72px;
-    margin-right: 16px;
-
-    &_weight {
-      margin-right: 20px;
-    }
-  }
-
-  .cat__item {
-    margin-bottom: 20px;
-  }
-
-  .cat__input {
-    margin-right: 55px;
-    flex-grow: 1;
-    font-size: 20px;
-    padding-left: 18px;
-    height: 52px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .cat {
-    margin-left: 39px;
-    width: 49%;
   }
 }
