@@ -1,28 +1,35 @@
 .owner {
   border: none;
-  padding-left: 0;
-  margin-left: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  &::before {
+    @include leaf-stripe;
+    width: 100%;
+    top: 16px;
+    z-index: 1;
+  }
 }
 
 .owner__title {
   @include text-style-title;
   text-transform: none;
-  position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 19px;
   line-height: 24px;
-
-  &::after {
-    @include leaf-stripe;
-    width: 99px;
-    top: 14px;
-    right: -20px;
-  }
+  position: relative;
+  background-color: $white;
+  z-index: 2;
+  padding-left: 19px;
+  padding-right: 20px;
+  width: 221px;
 }
 
 .owner__list {
+  padding-left: 19px;
+  padding-right: 20px;
   list-style: none;
-  padding: 0;
-  margin-bottom: 22px;
+  margin-bottom: 31px;
 }
 
 .owner__item {
@@ -32,7 +39,7 @@
 }
 
 .owner__label {
-  @include upper-16;
+  @include medium-title;
   margin-right: 10px;
   position: relative;
 
@@ -43,10 +50,10 @@
 }
 
 .owner__input {
-  @include upper-16;
+  @include medium-title;
   @include input-hover;
   margin-top: 1px;
-  padding-left: 14px;
+  padding-left: 16px;
   padding-top: 11px;
   padding-bottom: 12px;
   height: 45px;
@@ -63,5 +70,81 @@
     background: url("../img/icon-phone.svg") no-repeat 94% 50%;
     background-size: 20px 20px;
     width: 204px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .owner__title {
+    font-size: 36px;
+    width: 593px;
+    margin-left: 30px;
+    padding-left: 39px;
+  }
+
+  .owner__list {
+    margin-bottom: 0;
+    padding: 48px 65px 55px 68px;
+  }
+
+  .owner__item {
+    margin-bottom: 19px;
+  }
+
+  .owner__input {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-bottom: 18px;
+    height: 52px;
+
+    &_email {
+      background: url("../img/icon-mail.svg") no-repeat 96.5% 50%;
+      background-size: 17px 14px;
+    }
+
+    &_phone {
+      background: url("../img/icon-phone.svg") no-repeat 97% 50%;
+      background-size: 20px 20px;
+      padding-left: 17px;
+    }
+
+    &:invalid {
+      border: 2px solid 	hsl(0, 100%, 75%);
+    }
+
+    &:disabled {
+      opacity: 0.1;
+    }
+  }
+
+  .owner__label {
+    font-size: 20px;
+    margin-right: 18px;
+
+    &_email {
+      margin-left: 4px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .owner__title {
+    margin-left: 70px;
+  }
+
+  .owner__list {
+    display: flex;
+    padding-left: 108px;
+    padding-right: 113px;
+    padding-bottom: 57px;
+  }
+
+  .owner__item {
+    width: 47%;
+
+    &:first-child {
+      margin-right: 78px;
+    }
   }
 }

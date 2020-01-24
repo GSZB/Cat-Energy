@@ -1,0 +1,33 @@
+.header-logo {
+  cursor: pointer;
+  margin-left: 20px;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s ease;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.6;
+    transition: 0.1s ease;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header-logo {
+    margin-left: 0;
+  }
+
+  .header__img {
+    width: 173px;
+    height: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__img {
+    width: 202px;
+    height: 60px;
+  }
+}

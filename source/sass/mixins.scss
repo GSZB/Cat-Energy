@@ -7,7 +7,6 @@
 @mixin big-title {
   color: $blacky;
   font-size: 36px;
-  line-height: 60px;
   font-weight: 400;
 }
 
@@ -34,7 +33,7 @@
   color: hsl(0, 0%, 27%);
 }
 
-@mixin upper-16 {
+@mixin medium-title {
   color: $blacky;
   text-transform: uppercase;
   font-size: 16px;
@@ -44,10 +43,9 @@
   content: "";
   position: absolute;
   display: block;
-  width: 280px;
+  width: 88%;
   height: 1px;
   background-color: hsla(0, 0%, 0%, 0.1);
-  left: 20px;
 }
 
 @mixin catalog-stripe {
@@ -59,17 +57,17 @@
   background-color: hsla(0, 0%, 0%, 0.1);
 }
 
-@mixin catalog-btn {
+@mixin button-style {
   width: 280px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   padding-left: 9px;
   border: none;
   display: block;
   margin: 0 auto;
 }
 
-@mixin upper-14 {
+@mixin small-title {
   color: $blacky;
   font-size: 14px;
   font-weight: 400;
@@ -142,17 +140,17 @@
 }
 
 @mixin container {
-  max-width: 320px;
-  margin: auto;
+  width: 320px;
+  margin: 0 auto;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
-    max-width: 768px;
-    padding: 0 calc(50% - 768px);
+    width: 768px;
+    padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1300px;
-    padding: 0 calc(50% - 1440px);
+    width: 1440px;
+    padding: 0 110px;
   }
 }

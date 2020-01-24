@@ -1,5 +1,18 @@
+.additional {
+  position: relative;
+
+  &::before {
+    @include leaf-stripe;
+    width: 100%;
+    top: 43px;
+    z-index: 1;
+  }
+}
+
 .additional__wrapper {
   @include container;
+  padding: 0;
+  padding-top: 5px;
 }
 
 .additional__title {
@@ -7,49 +20,39 @@
   font-weight: 400;
   color: $blacky;
   line-height: 24px;
-  margin-top: 53px;
-  margin-bottom: 47px;
-  position: relative;
+  margin-bottom: 33px;
+  margin-top: 25px;
   margin-left: -1px;
-
-  &::before {
-    @include leaf-stripe;
-    width: 53px;
-    top: 14px;
-    right: -20px;
-  }
-
-  &::after {
-    @include catalog-stripe;
-    width: 280px;
-    top: 58px;
-    left: 0;
-  }
+  position: relative;
+  display: flex;
+  z-index: 2;
+  background-color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 268px;
 }
 
 .additional__list {
   list-style: none;
-  padding: 0;
+  padding: 0 20px;
   min-width: 282px;
+  margin-top: 0;
 }
 
 .additional__item {
-  margin-bottom: 30px;
+  padding-top: 12px;
+  padding-bottom: 16px;
   position: relative;
-
-  &::after {
-    @include catalog-stripe;
-    position: absolute;
-    width: 280px;
-    top: 116px;
-    left: 0;
-  }
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  border-collapse: collapse;
 }
 
 .additional__heading {
-  @include upper-16;
+  @include medium-title;
   color: hsl(0, 0%, 13%);
   margin-bottom: 12px;
+  margin-top: 0;
   margin-left: 1px;
 }
 
@@ -66,8 +69,8 @@
 }
 
 .additional__btn {
-  @include catalog-btn;
-  @include upper-16;
+  @include button-style;
+  @include medium-title;
   @include green-btn-hover;
   padding-left: 3px;
   padding-top: 11px;
@@ -81,10 +84,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .additional {
+    &::before {
+      top: 16px;
+    }
+  }
+
   .additional__title {
     font-size: 36px;
-    margin-left: 68px;
-    margin-top: 52px;
+    margin-top: 50px;
+    width: 412px;
+    margin-left: 0;
+    padding-left: 37px;
 
     &::before {
       width: 327px;
@@ -103,16 +114,20 @@
 
   .additional__list {
     margin-top: 86px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .additional__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 4%;
-    margin-left: 4%;
-    padding-top: 7px;
+    padding-top: 25px;
+    padding-left: 38px;
+    padding-right: 38px;
     border: 1px solid hsla(0, 0%, 0%, 0.2);
+    border-right: none;
+    border-left: none;
     padding-bottom: 27px;
     margin-bottom: 0;
     border-bottom: none;
@@ -128,12 +143,11 @@
 
   .additional__heading {
     font-size: 20px;
-    margin-left: 39px;
+    margin-bottom: 14px;
   }
 
   .additional__cover {
-    margin-top: 26px;
-    margin-right: 35px;
+    margin-top: 7px;
   }
 
   .additional__data {
@@ -150,8 +164,6 @@
 
   .additional__btn {
     width: 100%;
-    margin-right: 34px;
-    margin-left: 37px;
     padding-left: 0;
     margin-top: 14px;
   }
@@ -159,45 +171,58 @@
 
 @media (min-width: $desktop-width) {
   .additional {
+    width: 1440px;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 72px;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 72px;
+
+    &::before {
+      top: 94px;
+    }
+  }
+
+  .additional__container {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 78px;
   }
 
   .additional__wrapper {
     margin-left: 0;
+    padding: 0;
+    width: 1005px;
+    margin-right: 0;
   }
 
   .additional__title {
-    margin-top: 65px;
-    margin-left: 109px;
-
-    &::after {
-      width: 70px;
-      margin-left: -42px;
-    }
-
-    &::before {
-      width: 957px;
-      left: 374px;
-    }
+    margin: 0;
+    margin-left: 71px;
   }
 
   .additional__list {
-    margin-left: 75px;
-    width: 930px;
+    padding-left: 110px;
+    margin-top: 86px;
   }
 
   .additional__item {
     border-left: none;
     border-right: none;
-    padding-bottom: 14px;
+    padding-bottom: 13px;
     margin-right: 0;
+    width: 895px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    border-collapse: collapse;
   }
 
   .additional__heading {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 11px;
   }
 
   .additional__cover {
@@ -205,8 +230,8 @@
     justify-content: space-between;
     width: 288px;
     margin-left: auto;
-    margin-right: 0;
-    margin-top: 24px;
+    margin-right: 37px;
+    margin-top: 17px;
   }
 
   .additional__data_fifty {
@@ -217,6 +242,6 @@
     width: 245px;
     height: 40px;
     margin-right: 0;
-    margin-top: 7px;
+    margin-top: 0;
   }
 }

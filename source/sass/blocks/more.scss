@@ -30,7 +30,7 @@
 }
 
 .more__title {
-  @include upper-16;
+  @include medium-title;
   text-align: center;
   margin-top: 24px;
   margin-left: 2px;
@@ -48,8 +48,8 @@
 }
 
 .more__show {
-  @include catalog-btn;
-  @include upper-16;
+  @include button-style;
+  @include medium-title;
   background-color: hsl(0, 0%, 95%);
   color: $dark-grey;
   font-family: $main-text;
@@ -112,8 +112,6 @@
 @media (min-width: $desktop-width) {
   .more {
     margin-top: 143px;
-    margin-right: 37px;
-    margin-left: 39px;
     padding-left: 0;
 
     &::before {

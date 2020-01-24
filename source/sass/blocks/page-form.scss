@@ -1,42 +1,47 @@
-.form,
 .page-form {
   @include container;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.page-form__title {
-  @include container;
-  @include big-title;
-  margin-top: 15px;
-  margin-bottom: 25px;
+  padding: 0;
   position: relative;
 
   &::before {
     @include catalog-stripe;
     position: absolute;
-    top: -16px;
+    top: -1px;
     left: 0;
   }
 }
 
-.page-form__text {
+.page-form__container {
+  padding-top: 41px;
+}
+
+.page-form__title {
   @include container;
-  @include upper-14;
-  width: 303px;
+  @include big-title;
+  margin-bottom: 46px;
+  margin-top: 0;
+}
+
+.page-form__text {
+  @include small-title;
+  @include container;
+  width: 271px;
   margin: 0;
 }
 
+.page-form__form {
+  padding: 0;
+}
+
 .page-form__button {
-  @include catalog-btn;
-  @include upper-16;
+  @include button-style;
+  @include medium-title;
   @include green-btn-hover;
   font-family: $main-text;
   color: $white;
   background-color: $leaf;
-  margin-top: 9px;
-  padding-left: 9px;
-  margin-left: 20px;
+  margin-top: 16px;
+  padding-left: 6px;
 }
 
 .page-form__required {
@@ -49,10 +54,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .page-form {
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
   .page-form__title {
     font-size: 60px;
-    margin-left: 29px;
-    margin-top: 45px;
+    margin-top: 12px;
 
     &::before {
       display: none;
@@ -61,10 +73,10 @@
 
   .page-form__text {
     font-size: 20px;
-    margin-top: 55px;
+    margin-top: 76px;
+    margin-left: 40px;
     line-height: 1.5;
-    min-width: 323px;
-    margin-left: 70px;
+    max-width: 383px;
   }
 
   .page-form__button {
@@ -72,10 +84,10 @@
     font-size: 20px;
     margin-left: 71px;
     padding-left: 2px;
-    margin-top: 40px;
-    padding-top: 10px;
+    margin-top: 31px;
+    padding-top: 16px;
     width: 283px;
-    padding-bottom: 12px;
+    padding-bottom: 18px;
   }
 
   .page-form__required {
@@ -87,16 +99,20 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-form__container {
+    padding-top: 38px;
+  }
+
   .page-form__title {
-    margin-left: 110px;
-    margin-top: 62px;
+    margin-top: 0;
   }
 
   .page-form__text {
-    margin-left: 110px;
+    max-width: 543px;
+    padding-left: 70px;
   }
 
-  .form__wrapper {
+  .page-form__wrapper {
     display: flex;
   }
 
