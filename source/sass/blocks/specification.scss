@@ -3,7 +3,7 @@
 }
 
 .specification__title {
-  @include upper-16;
+  @include medium-title;
   font-weight: 400;
   width: 74px;
   margin-top: 26px;
@@ -20,7 +20,7 @@
 .specification__unit {
   font-size: 12px;
   font-family: $arial;
-  line-height: 14px;
+  line-height: 16px;
 }
 
 @media (min-width: $tablet-width) {

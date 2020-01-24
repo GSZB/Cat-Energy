@@ -1,26 +1,31 @@
 .extra {
   border: none;
-  padding-left: 0;
-  margin-left: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  &::before {
+    @include leaf-stripe;
+    width: 100%;
+    top: 11px;
+    z-index: 1;
+  }
 }
 
 .extra__title {
   @include text-style-title;
   text-transform: none;
   position: relative;
-
-  &::after {
-    @include leaf-stripe;
-    width: 136px;
-    top: 11px;
-    left: 164px;
-  }
+  background-color: $white;
+  padding-left: 20px;
+  padding-right: 23px;
+  z-index: 2;
 }
 
 .extra__list {
+  @include container;
   list-style: none;
-  padding: 0;
-  margin-top: 39px;
+  margin-top: 45px;
 }
 
 .extra__item {
@@ -28,12 +33,16 @@
 }
 
 .extra__label {
-  @include upper-16;
+  @include medium-title;
 }
 
 .extra__input:checked,
 .extra__input:not(:checked) {
   appearance: none;
+
+  &:disabled {
+    opacity: 0.1;
+  }
 }
 
 .extra__input:checked + .extra__label,
@@ -63,9 +72,9 @@
 .extra__input:not(:checked) + .extra__label::after {
   @include input-transition;
   left: 3px;
-  top: -1px;
-  width: 18px;
-  height: 9px;
+  top: 0;
+  width: 20px;
+  height: 11px;
   border-radius: 1px;
   border-left: 2px solid hsl(97, 53%, 47%);
   border-bottom: 2px solid hsl(97, 53%, 47%);
@@ -78,4 +87,76 @@
 
 .extra__input:checked + .extra__label::after {
   opacity: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .extra {
+    &::before {
+      top: 13px;
+    }
+  }
+
+  .extra__title {
+    font-size: 36px;
+    margin-left: 30px;
+    padding-left: 39px;
+    padding-right: 40px;
+  }
+
+  .extra__list {
+    padding: 32px 104px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .extra__label {
+    font-size: 20px;
+  }
+
+  .extra__item {
+    width: 34%;
+    margin-bottom: 52px;
+    margin-right: 26px;
+
+    &_last {
+      margin-bottom: 0;
+    }
+  }
+
+  .extra__input:checked + .extra__label,
+  .extra__input:not(:checked) + .extra__label {
+    @include label-position;
+    line-height: 17px;
+    padding-left: 21px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .extra__input:checked + .extra__label::after,
+  .extra__input:not(:checked) + .extra__label::after {
+    left: -26px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra__title {
+    margin-left: 0;
+  }
+
+  .extra__list {
+    padding-left: 74px;
+    padding-right: 42px;
+    padding-bottom: 5px;
+  }
+
+  .extra__item {
+    width: 16%;
+
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
 }

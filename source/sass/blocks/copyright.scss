@@ -1,17 +1,15 @@
 .copyright {
   display: flex;
   background: $light-grey 320px 300px;
-  padding-bottom: 15px;
-  margin-left: -20px;
-  margin-right: -20px;
+  padding: 6px 13px 15px 19px;
 }
 
 .copyright__text {
   font-family: $arial;
   font-size: 16px;
   color: $dark-grey;
-  margin-left: 19px;
   display: inline-block;
+  margin-top: 10px;
 }
 
 .copyright__logo {
@@ -20,31 +18,17 @@
   background: url("../img/htmlacademy.svg") no-repeat;
   display: inline-block;
   margin-left: auto;
-  margin-right: 13px;
-  margin-top: 6px;
 }
 
 @media (min-width: $tablet-width) {
   .copyright {
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .copyright__text {
-    width: 114px;
-    margin-top: 61px;
     margin-right: 15px;
-  }
-
-  .copyright__logo {
-    margin-right: 23px;
-    margin-top: 50px;
+    width: 114px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .copyright {
-    margin-right: 80px;
-    margin-top: 5px;
-  }
-}

@@ -1,8 +1,9 @@
-.intro {
+.intro__container {
   @include container;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   padding-top: 27px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -22,6 +23,21 @@
   margin-bottom: 302px;
 }
 
+.intro__btn {
+  @include button-style;
+  @include white-text;
+  @include green-btn-hover;
+  padding-left: 0;
+  margin: 0 auto;
+  margin-top: 135px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: hsl(97, 53%, 47%);
+  width: 280px;
+}
+
 .intro__img {
   display: flex;
   margin: 0 auto;
@@ -30,71 +46,88 @@
   left: 20px;
 }
 
-.intro__background {
-  display: none;
-}
-
 @media (min-width: $tablet-width) {
-  .intro {
-    background: hsl(0, 0%, 100%);
+  .intro__container {
+    padding: 32px 27px;
+    background-image: none;
   }
 
   .intro__title {
     font-size: 60px;
     color: $blacky;
     max-width: 414px;
-    margin-left: 117px;
-    margin-top: 45px;
     line-height: 1;
     text-align: left;
+    margin-left: 90px;
   }
 
   .intro__text {
     color: $blacky;
     font-size: 20px;
     text-align: left;
-    margin-left: 118px;
+    margin-left: 91px;
     margin-top: 44px;
+  }
+
+  .intro__btn {
+    position: absolute;
+    top: 126px;
+    left: 119px;
+    font-size: 20px;
+    padding-top: 16px;
+    max-width: 245px;
+    padding-bottom: 18px;
+    padding-right: 4px;
+    padding-left: 0;
   }
 
   .intro__img {
     width: 709px;
     height: 609px;
-    top: 201px;
+    top: 233px;
     left: 29px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .intro__background {
-    position: absolute;
-    display: flex;
-    z-index: 1;
-    width: 720px;
-    height: 696px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: top right;
-    top: -222px;
-    right: 1px;
+  .intro__container {
+    position: relative;
+    padding: 27px 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      left: 50%;
+      top: -173px;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-color: linear-gradient(to right, white 110%, #ebebeb 110%);
+    }
   }
 
   .intro__title {
-    margin-left: 190px;
-    margin-top: 96px;
+    margin-left: 81px;
+    margin-top: 23px;
   }
 
   .intro__text {
     font-size: 20px;
     margin-top: 43px;
-    margin-left: 190px;
+    margin-left: 81px;
+  }
+
+  .intro__btn {
+    top: 150px;
+    left: 120px;
   }
 
   .intro__img {
     width: 552px;
     height: auto;
     left: 560px;
-    top: -80px;
+    top: -30px;
     z-index: 3;
   }
 }

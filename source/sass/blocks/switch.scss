@@ -5,8 +5,8 @@
 }
 
 .switch__text {
-  @include upper-16;
-  margin-top: 26px;
+  @include medium-title;
+  margin-top: 29px;
   border: none;
   background: transparent;
   font-family: $main-text;
@@ -82,13 +82,13 @@
 @media (min-width: $tablet-width) {
   .switch {
     background: linear-gradient(to right, $light-grey 50%, hsl(0, 0%, 92%) 50%);
-    padding-bottom: 68px;
+    padding-bottom: 74px;
     width: 100%;
   }
 
   .switch__text {
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
 
     &_left {
       margin-left: 11%;
@@ -140,14 +140,14 @@
 
 @media (min-width: $desktop-width) {
   .switch {
-    background: linear-gradient(to right, $light-grey 51%, hsl(0, 0%, 92%) 51%);
+    background: linear-gradient(to right, $light-grey 50%, hsl(0, 0%, 92%) 50%);
     width: 100%;
     padding-top: 21px;
   }
 
   .switch__text {
     &_left {
-      margin-left: 13.5%;
+      margin-left: 11.5%;
     }
 
     &_right {

@@ -1,21 +1,22 @@
 .cat {
   border: none;
-  margin-top: 20px;
-  margin-left: -1px;
-  padding-left: 0;
+  margin: 0;
+  margin-top: 25px;
   position: relative;
+  padding: 0;
 
   &::after {
     @include catalog-stripe;
     position: absolute;
-    bottom: -1px;
-    left: -20px;
+    bottom: 0;
   }
 }
 
 .cat__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 14px 19px 10px 19px;
   list-style: none;
-  padding: 0;
 }
 
 .cat__item {
@@ -25,7 +26,7 @@
 }
 
 .cat__label {
-  @include upper-16;
+  @include medium-title;
   color: hsl(0, 0%, 13%);
 
   &_name {
@@ -42,12 +43,11 @@
 }
 
 .cat__input {
-  @include upper-16;
+  @include medium-title;
   @include input-hover;
   padding-left: 14px;
   padding-top: 12px;
   padding-bottom: 13px;
-  margin-right: 8px;
   height: 45px;
   box-sizing: border-box;
   border: 1px solid hsla(0, 0%, 80%, 0.5);
@@ -62,5 +62,72 @@
 
   &_age {
     width: 172px;
+  }
+
+  &:invalid {
+    border: 2px solid 	hsl(0, 100%, 75%);
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+
+  &:focus,
+  &:active {
+    padding-left: 13px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .cat {
+    padding-left: 30px;
+    padding-top: 27px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .cat__list {
+    padding-left: 41px;
+    padding-right: 67px;
+  }
+
+  .cat__item {
+    margin-bottom: 20px;
+  }
+
+  .cat__label {
+    font-size: 20px;
+  }
+
+  .cat__input {
+    font-size: 20px;
+    padding-left: 19px;
+    padding-top: 24px;
+    padding-bottom: 26px;
+    flex-grow: 1;
+
+    &:focus,
+    &:active {
+      padding-left: 18px;
+      padding-top: 23px;
+      padding-bottom: 25px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cat {
+    padding: 41px 83px 41px 41px;
+    width: 53%;
+  }
+
+  .cat__list {
+    padding: 0;
+  }
+
+  .cat__item:last-child {
+    margin-bottom: 0;
   }
 }

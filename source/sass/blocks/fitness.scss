@@ -1,22 +1,24 @@
 .fitness {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
   border: none;
   position: relative;
-  margin-bottom: 22px;
+  padding-top: 26px;
+  padding-bottom: 30px;
 
   &::after {
     @include catalog-stripe;
-    position: absolute;
-    bottom: 6px;
-    left: 0;
     width: 100%;
+    position: absolute;
+    bottom: 28px;
   }
 }
 
 .fitness__list {
+  @include container;
   list-style: none;
-  padding: 0;
-  margin-top: 22px;
-  margin-left: 2px;
+  margin: 0;
 }
 
 .fitness__item {
@@ -25,13 +27,17 @@
 }
 
 .fitness__label {
-  @include upper-16;
+  @include medium-title;
   color: hsl(0, 0%, 13%);
 }
 
 .fitness__input:checked,
 .fitness__input:not(:checked) {
   appearance: none;
+
+  &:disabled {
+    opacity: 0.1;
+  }
 }
 
 .fitness__input:checked + .fitness__label,
@@ -76,9 +82,8 @@
 @media (min-width: $tablet-width) {
   .fitness {
     border: 1px solid hsla(0, 0%, 0%, 0.2);
-    margin-left: 71px;
-    margin-right: 67px;
-    margin-top: 43px;
+    margin: 43px 67px 81px 71px;
+    padding: 0;
 
     &::after {
       display: none;
@@ -86,11 +91,15 @@
   }
 
   .fitness__list {
-    margin-top: 29px;
+    margin-top: 33px;
+    padding: 0 38px;
+    padding-bottom: 8px;
+    width: 100%;
   }
 
   .fitness__item {
     margin-bottom: 32px;
+    margin-left: 0;
 
     &_last {
       margin-bottom: 25px;
@@ -113,12 +122,18 @@
 
 @media (min-width: $desktop-width) {
   .fitness {
-    margin-left: 13px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 66px;
     align-self: baseline;
+    margin-bottom: 76px;
+  }
+
+  .fitness__list {
+    padding-right: 52px;
   }
 
   .fitness__item {
-    margin-right: 241px;
+    margin-right: 197px;
   }
 }

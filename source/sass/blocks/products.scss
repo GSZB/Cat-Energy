@@ -1,22 +1,22 @@
-.products {
+.products__container {
   @include container;
 }
 
 .products__title {
   @include big-title;
-  margin-top: 15px;
+  margin-top: 11px;
   margin-bottom: 24px;
   position: relative;
 
   &::before {
     @include catalog-stripe;
-    top: -16px;
+    top: -37px;
     left: -20px;
   }
 
   &::after {
     @include catalog-stripe;
-    top: 88px;
+    top: 67px;
     left: -20px;
   }
 }
@@ -24,6 +24,8 @@
 .products__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  padding-top: 21px;
 }
 
 .products__item {
@@ -41,24 +43,28 @@
 }
 
 .products__pic {
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 .products__btn {
-  @include catalog-btn;
-  @include upper-16;
+  @include button-style;
+  @include medium-title;
   @include green-btn-hover;
   font-family: $main-text;
   background-color: $leaf;
   color: $white;
   margin-bottom: 20px;
+  margin-top: -3px;
 }
 
 @media (min-width: $tablet-width) {
+  .products__container {
+    padding-top: 44px;
+  }
+
   .products__title {
     font-size: 60px;
-    margin-left: 4%;
-    margin-top: 45px;
+    margin-top: 9px;
 
     &::before,
     &::after {
@@ -69,7 +75,7 @@
   .products__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .products__item {
@@ -119,19 +125,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .products__title {
-    margin-left: 110px;
-    margin-top: 62px;
-  }
-
-  .products__list {
-    margin-left: 70px;
-    margin-right: 70px;
+  .products__container {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 29px;
   }
 
   .products__item {
-    margin-right: 40px;
-    margin-left: 40px;
     padding-bottom: 8px;
 
     &_bottom {
