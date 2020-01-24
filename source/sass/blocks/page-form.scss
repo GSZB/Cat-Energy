@@ -76,7 +76,7 @@
     margin-top: 76px;
     margin-left: 40px;
     line-height: 1.5;
-    max-width: 383px;
+    width: 383px;
   }
 
   .page-form__button {
@@ -105,11 +105,13 @@
 
   .page-form__title {
     margin-top: 0;
+    padding-left: 40px;
   }
 
   .page-form__text {
-    max-width: 543px;
-    padding-left: 70px;
+    padding-left: 40px;
+    margin-left: 0;
+    width: 473px;
   }
 
   .page-form__wrapper {
@@ -118,7 +120,7 @@
 
   .page-form__button {
     margin-top: 13px;
-    margin-left: 111px;
+    margin-left: 41px;
     margin-bottom: 82px;
     width: 568px;
   }

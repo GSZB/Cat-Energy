@@ -1,6 +1,5 @@
-.products {
+.products__container {
   @include container;
-  padding: 24px 20px;
 }
 
 .products__title {
@@ -127,8 +126,9 @@
 
 @media (min-width: $desktop-width) {
   .products__container {
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 29px;
-    width: 100%;
   }
 
   .products__item {

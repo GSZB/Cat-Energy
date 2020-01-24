@@ -130,14 +130,12 @@
 
 @media (min-width: $desktop-width) {
   .owner__title {
-    margin-left: 70px;
+    margin-left: 0;
   }
 
   .owner__list {
     display: flex;
-    padding-left: 108px;
-    padding-right: 113px;
-    padding-bottom: 57px;
+    padding: 47px 40px 57px;
   }
 
   .owner__item {

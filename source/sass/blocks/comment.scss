@@ -71,12 +71,12 @@
 
 @media (min-width: $desktop-width) {
   .comment__title {
-    margin-left: 70px;
+    margin-left: 0;
   }
 
   .comment__textarea {
-    margin-left: 110px;
-    width: 85%;
+    margin-left: 40px;
+    width: 94%;
     margin-bottom: 73px;
   }
 }
