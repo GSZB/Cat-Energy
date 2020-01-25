@@ -177,15 +177,26 @@
 
 @media (min-width: $desktop-width) {
   .results {
-    background: linear-gradient(to bottom, $white 29.35%, hsl(0, 0%, 95%) 29.35%);
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: flex;
+      width: 100vw;
+      height: 458px;
+      background: linear-gradient(to right, hsl(0, 0%, 95%) 66.5%, hsl(0, 0%, 92%) 66.5%);
+      top: 195px;
+    }
   }
 
   .results__container {
     display: flex;
     padding: 0;
     margin: 0 auto;
-    width: 1440px;
-    background: linear-gradient(to bottom, $white 29.35%, hsl(0, 0%, 95%) 29.35%);
+    width: 1300px;
+    z-index: 2;
   }
 
   .results__text {
@@ -225,10 +236,11 @@
   }
 
   .results__box {
-    width: 82%;
-    padding-left: 111px;
+    width: 100%;
+    padding-left: 41px;
     padding-top: 77px;
     padding-bottom: 67px;
+    background: linear-gradient(to bottom, $white 30%, hsl(0, 0%, 95%) 30%);
   }
 
   .results__cover {
@@ -247,12 +259,12 @@
   }
 
   .results__cat-left {
-    width: 50%;
-    background: linear-gradient(to bottom, $white 36.6%, hsl(0, 0%, 95%) 36.6%);
+    width: 54.6%;
+    background: linear-gradient(to bottom, $white 37.3%, hsl(0, 0%, 95%) 37.3%);
   }
 
   .results__cat-right {
-    width: 50%;
-    background: linear-gradient(to bottom, $white 36.6%, hsl(0, 0%, 92%) 36.6%);
+    width: 45.4%;
+    background: linear-gradient(to bottom, $white 37.3%, hsl(0, 0%, 92%) 37.3%);
   }
 }

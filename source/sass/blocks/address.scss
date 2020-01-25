@@ -37,6 +37,9 @@
 
 .address__overlay {
   position: relative;
+  width: 100%;
+  display: flex;
+  z-index: 1;
 
   &::after {
     content: "";
@@ -46,10 +49,14 @@
     width: 55px;
     height: 53px;
     display: flex;
-    z-index: 1;
-    top: -206px;
-    left: 129px;
+    z-index: 2;
+    top: 137px;
+    left: 43vw;
   }
+}
+
+.address__map {
+  height: 363px;
 }
 
 @media (min-width: $tablet-width) {
@@ -64,7 +71,7 @@
 
   .address__info {
     justify-content: space-between;
-    padding: 35px 71px;
+    padding: 35px 71px 56px;
   }
 
   .address__offer {
@@ -91,13 +98,17 @@
       content: "";
       background-image: url("../img/pin-new.png");
       background-size: 113px 96px;
-      top: -232px;
-      left: 322px;
+      top: 38%;
+      left: 42.7vw;
     }
 
     &_form::after {
       top: -234px;
     }
+  }
+
+  .address__map {
+    height: 400px;
   }
 
   .address__img {
@@ -128,8 +139,8 @@
     background: $white;
     width: 570px;
     display: flex;
-    z-index: 1;
-    left: 7.7%;
+    z-index: 2;
+    right: 53vw;
     top: 96px;
     padding: 65px 90px 58px 75px;
   }
@@ -140,8 +151,13 @@
 
   .address__overlay {
     &::after {
-      top: -230px;
-      left: 69.7%;
+      left: 45.7%;
     }
+  }
+
+  .address__map {
+    width: 100%;
+    border: none;
+    overflow: hidden;
   }
 }
