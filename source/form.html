@@ -5,21 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>HTML Academy: Программа Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+    <div style="display:none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
   <header class="header" id="header">
     <div class="header__container">
       <a class="header-logo" id="header__logo" href="index.html">
         <picture class="header__picture">
-          <source srcset="img/logo-desktop.svg" media="(min-width: 1300px)" />
-          <source srcset="img/logo-tablet.svg" media="(min-width: 768px)" />
+          <source srcset="img/logo-desktop.svg" media="(min-width: 1300px)">
+          <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
           <img class="header__img" src="img/logo-mobile.svg" alt="Логотип магазина Кэт энерджи" width="191" height="38">
         </picture>
       </a>
-      <button class="header__button" type="button">Меню</button>
-      <ul class="menu-list">
+      <button class="header__button header__button_close" type="button">Меню</button>
+      <ul class="menu-list menu-opened">
         <li class="menu-list__item">
           <a class="menu-list__link" href="index.html">Главная</a>
         </li>
@@ -34,7 +39,7 @@
   </header>
   <main class="page-form">
     <div class="page-form__container">
-      <h2 class="page-form__title">Подбор программы</h2>
+      <h1 class="page-form__title">Подбор программы</h1>
       <p class="page-form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="page-form__form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="page-form__wrapper">
@@ -42,36 +47,30 @@
             <ul class="cat__list">
               <li class="cat__item">
                 <label class="cat__label cat__label_name" for="cat-name">Имя:*</label>
-                <input class="cat__input cat__input_name" id="cat-name" type="text" name="name" placeholder="Барсик"
-                  aria-label="Имя котенка">
+                <input class="cat__input cat__input_name" id="cat-name" type="text" name="name" placeholder="Барсик" aria-label="Имя котенка">
               </li>
               <li class="cat__item">
                 <label class="cat__label cat__label_weight" for="cat-weight">Вес (кг):*</label>
-                <input class="cat__input cat__input_weight" id="cat-weight" type="text" name="weight" placeholder="7"
-                  aria-label="Вес котенка в килограммах">
+                <input class="cat__input cat__input_weight" id="cat-weight" type="text" name="weight" placeholder="7" aria-label="Вес котенка в килограммах">
               </li>
               <li class="cat__item">
                 <label class="cat__label cat__label_age" for="cat-age">Возраст (лет):</label>
-                <input class="cat__input cat__input_age" id="cat-age" type="text" name="age" placeholder="7"
-                  aria-label="Возраст котенка в годах">
+                <input class="cat__input cat__input_age" id="cat-age" type="text" name="age" placeholder="7" aria-label="Возраст котенка в годах">
               </li>
             </ul>
           </fieldset>
           <fieldset class="fitness">
             <ul class="fitness__list">
               <li class="fitness__item">
-                <input class="fitness__input" id="fitness-loss" type="radio" checked name="program"
-                  aria-label="Программа для похудения">
+                <input class="fitness__input" id="fitness-loss" type="radio" checked="" name="program" aria-label="Программа для похудения">
                 <label class="fitness__label" for="fitness-loss">Похудение</label>
               </li>
               <li class="fitness__item">
-                <input class="fitness__input" id="fitness-gain" type="radio" name="program"
-                  aria-label="Программа для набора веса">
+                <input class="fitness__input" id="fitness-gain" type="radio" name="program" aria-label="Программа для набора веса">
                 <label class="fitness__label" for="fitness-gain">Набор массы</label>
               </li>
               <li class="fitness__item fitness__item_last">
-                <input class="fitness__input" id="fitness-advice" type="radio" name="program"
-                  aria-label="Помощь в подборе программы">
+                <input class="fitness__input" id="fitness-advice" type="radio" name="program" aria-label="Помощь в подборе программы">
                 <label class="fitness__label" for="fitness-advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -82,27 +81,23 @@
           <ul class="owner__list">
             <li class="owner__item">
               <label class="owner__label owner__label_email" for="owner-email">E-mail:*</label>
-              <input class="owner__input owner__input_email" id="owner-email" type="email" name="email"
-                placeholder="kuklachev@gmail.com" aria-label="E-mail владельца" required>
+              <input class="owner__input owner__input_email" id="owner-email" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="E-mail владельца" required="">
             </li>
             <li class="owner__item">
               <label class="owner__label owner__label_second" for="owner-phone">Телефон:*</label>
-              <input class="owner__input owner__input_phone" id="owner-phone" type="tel" name="phone"
-                placeholder="8 (960) 900-60-90" aria-label="Телефон владельца" required>
+              <input class="owner__input owner__input_phone" id="owner-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" aria-label="Телефон владельца" required="">
             </li>
           </ul>
         </fieldset>
         <fieldset class="comment">
           <legend class="comment__title">Комментарий</legend>
-          <textarea class="comment__textarea" name="comment" maxlength="900" cols="30" rows="7"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="comment__textarea" name="comment" maxlength="900" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="extra">
           <legend class="extra__title">Дополнительно</legend>
           <ul class="extra__list">
             <li class="extra__item">
-              <input class="extra__input" id="extra-sugar" type="checkbox" checked name="extra"
-                aria-label="Сахарозаменитель">
+              <input class="extra__input" id="extra-sugar" type="checkbox" checked="" name="extra" aria-label="Сахарозаменитель">
               <label class="extra__label" for="extra-sugar">Сахарозаменитель</label>
             </li>
             <li class="extra__item extra__item_right">
@@ -129,8 +124,7 @@
       <div class="address address__grey">
         <div class="address__info">
             <p class="address__offer">приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <address class="address__position">ул. Большая Конюшенная, д. 19/8<span
-              class="address__position_city">Санкт-Петербург</span></address>
+          <address class="address__position">ул. Большая Конюшенная, д. 19/8<span class="address__position_city">Санкт-Петербург</span></address>
         </div>
         <div class="address__overlay">
           <iframe class="address__map" width="1300" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%2C%20%D0%B4.%2019%2F8&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>        </div>
@@ -144,8 +138,7 @@
             <a href="#" class="social__link social__link_vk" aria-label="Интернет-магазин Кэт энерджи во вконтакте"></a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link_insta"
-              aria-label="Интернет-магазин Кэт энерджи в инстаграме"></a>
+            <a href="#" class="social__link social__link_insta" aria-label="Интернет-магазин Кэт энерджи в инстаграме"></a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link social__link_fb" aria-label="Интернет-магазин Кэт энерджи в фейсбуке"></a>
@@ -153,8 +146,7 @@
         </ul>
         <div class="copyright">
           <p class="copyright__text">HTML Academy</p>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo"
-            aria-label="Страница HTML Академии"></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo" aria-label="Страница HTML Академии"></a>
         </div>
       </div>
     </div>
