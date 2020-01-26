@@ -3,7 +3,9 @@
 
   &::before {
     @include leaf-stripe;
-    width: 100%;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     top: 43px;
     z-index: 1;
   }
@@ -171,7 +173,7 @@
 
 @media (min-width: $desktop-width) {
   .additional {
-    width: 1440px;
+    width: 1300px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;

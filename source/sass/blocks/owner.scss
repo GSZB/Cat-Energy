@@ -6,8 +6,10 @@
 
   &::before {
     @include leaf-stripe;
-    width: 100%;
     top: 16px;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     z-index: 1;
   }
 }

@@ -48,9 +48,28 @@
     background-image: url("../img/advantage-dining@1x.png");
   }
 
-  &_clock::before,
-  &_change-text::before {
+  &_clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-resolution: $retina-dppx) {
+  .info__item {
+    &_leaf::before {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+
+    &_dish::before {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+
+    &_fork::before {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+
+    &_clock::before {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 
@@ -63,10 +82,11 @@
       content: "";
       display: flex;
       position: absolute;
-      width: 100%;
+      width: 100vw;
       height: 1px;
-      top: 723px;
-      left: 0;
+      top: 718px;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: $blacky;
       opacity: 0.1;
     }
