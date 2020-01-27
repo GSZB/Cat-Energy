@@ -80,12 +80,16 @@
           <legend class="owner__title">Контактные данные (владельца кота)</legend>
           <ul class="owner__list">
             <li class="owner__item">
-              <label class="owner__label owner__label_email" for="owner-email">E-mail:*</label>
-              <input class="owner__input owner__input_email" id="owner-email" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="E-mail владельца" required="">
+              <label class="owner__label owner__label_email" for="owner-email">E-mail:*
+                <input class="owner__input owner__input_email" id="owner-email" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="E-mail владельца" required="">
+                <svg class="owner__image owner__image_email" width="17" height="14"><use xlink:href="#icon-mail"></use></svg>
+              </label>
             </li>
             <li class="owner__item">
-              <label class="owner__label owner__label_second" for="owner-phone">Телефон:*</label>
-              <input class="owner__input owner__input_phone" id="owner-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" aria-label="Телефон владельца" required="">
+              <label class="owner__label owner__label_second" for="owner-phone">Телефон:*
+                <input class="owner__input owner__input_phone" id="owner-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" aria-label="Телефон владельца" required="">
+                <svg class="owner__image owner__image_phone" width="20" height="20"><use xlink:href="#icon-phone"></use></svg>
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -121,10 +125,12 @@
   </main>
   <footer class="footer" id="footer">
     <div class="footer__container">
-      <div class="address address__grey">
+      <div class="address">
         <div class="address__info">
             <p class="address__offer">приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <address class="address__position">ул. Большая Конюшенная, д. 19/8<span class="address__position_city">Санкт-Петербург</span></address>
+            <address class="address__position">ул. Большая Конюшенная, д. 19/8
+            <span class="address__position_city">Санкт-Петербург</span>
+          </address>
         </div>
         <div class="address__overlay">
           <iframe class="address__map" width="1300" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%2C%20%D0%B4.%2019%2F8&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>        </div>
@@ -135,22 +141,31 @@
         </a>
         <ul class="social">
           <li class="social__item">
-            <a href="#" class="social__link social__link_vk" aria-label="Интернет-магазин Кэт энерджи во вконтакте"></a>
+            <a href="#" class="social__link social__link_vk" aria-label="Интернет-магазин Кэт энерджи во вконтакте">
+              <svg class="social__image social__image_vk" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
+            </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link_insta" aria-label="Интернет-магазин Кэт энерджи в инстаграме"></a>
+            <a href="#" class="social__link social__link_insta" aria-label="Интернет-магазин Кэт энерджи в инстаграме">
+              <svg class="social__image social__image_insta" width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+            </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link_fb" aria-label="Интернет-магазин Кэт энерджи в фейсбуке"></a>
+            <a href="#" class="social__link social__link_fb" aria-label="Интернет-магазин Кэт энерджи в фейсбуке">
+              <svg class="social__image social__image_fb" width="10" height="19"><use xlink:href="#icon-fb"></use></svg>
+            </a>
           </li>
         </ul>
         <div class="copyright">
           <p class="copyright__text">HTML Academy</p>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo" aria-label="Страница HTML Академии"></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo" aria-label="Страница HTML Академии">
+            <svg class="copyright__image" width="41" height="41"><use xlink:href="#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
+  <script src="js/picturefill.js"></script>
   <script src="js/menu.js"></script>
 </body>
 

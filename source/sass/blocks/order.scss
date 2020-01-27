@@ -11,19 +11,17 @@
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 56px;
-    height: 61px;
-    display: flex;
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 40%;
-    top: 22%;
-  }
+.order__image {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 61px;
+  display: flex;
+  left: 40%;
+  top: 22%;
+  fill: $white;
 }
 
 .order__text {
