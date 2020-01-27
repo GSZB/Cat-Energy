@@ -77,20 +77,16 @@
 
 .owner__image_email {
   position: absolute;
-  right: 35px;
-
-  &:hover {
-    fill: $leaf;
-  }
+  right: 16px;
 }
 
 .owner__image_phone {
   position: absolute;
-  right: 35px;
+  right: 16px;
+}
 
-  &:hover {
-    fill: $leaf;
-  }
+.owner__input:hover + .owner__image {
+  fill: $leaf;
 }
 
 @media (min-width: $tablet-width) {
@@ -119,14 +115,7 @@
     height: 52px;
     margin-left: 17px;
 
-    &_email {
-      background: url("../img/icon-mail.svg") no-repeat 96.5% 50%;
-      background-size: 17px 14px;
-    }
-
     &_phone {
-      background: url("../img/icon-phone.svg") no-repeat 97% 50%;
-      background-size: 20px 20px;
       padding-left: 17px;
     }
 
@@ -146,6 +135,12 @@
       margin-left: 4px;
     }
   }
+
+  .owner__image_email {
+    position: absolute;
+    right: 20px;
+  }
+
 }
 
 @media (min-width: $desktop-width) {

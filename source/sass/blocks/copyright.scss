@@ -18,8 +18,10 @@
 }
 
 .copyright__image {
+  color: $dark-grey;
+
   &:hover {
-    fill: $leaf;
+    color: $leaf;
   }
 
   &:active {
