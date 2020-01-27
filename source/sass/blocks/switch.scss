@@ -140,18 +140,20 @@
 
 @media (min-width: $desktop-width) {
   .switch {
-    background: linear-gradient(to right, $light-grey 50%, hsl(0, 0%, 92%) 50%);
+    background: linear-gradient(to right, $light-grey 54.5%, hsl(0, 0%, 92%) 54.5%);
     width: 100%;
     padding-top: 21px;
+    padding-left: 91px;
+    padding-right: 25px;
   }
 
   .switch__text {
     &_left {
-      margin-left: 11.5%;
+      margin-left: 0;
     }
 
     &_right {
-      margin-right: 12%;
+      margin-right: 0;
     }
   }
 }

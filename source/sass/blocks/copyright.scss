@@ -13,11 +13,20 @@
 }
 
 .copyright__logo {
-  width: 41px;
-  height: 41px;
-  background: url("../img/htmlacademy.svg") no-repeat;
   display: inline-block;
   margin-left: auto;
+}
+
+.copyright__image {
+  color: $dark-grey;
+
+  &:hover {
+    color: $leaf;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

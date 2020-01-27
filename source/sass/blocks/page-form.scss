@@ -12,7 +12,7 @@
 }
 
 .page-form__container {
-  padding-top: 41px;
+  padding-top: 36px;
 }
 
 .page-form__title {
@@ -60,6 +60,10 @@
     &::before {
       display: none;
     }
+  }
+
+  .page-form__container {
+    padding-top: 40px;
   }
 
   .page-form__title {

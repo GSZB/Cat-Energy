@@ -6,7 +6,9 @@
 
   &::before {
     @include leaf-stripe;
-    width: 100%;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     top: 11px;
     z-index: 1;
   }

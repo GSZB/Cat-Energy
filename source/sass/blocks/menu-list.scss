@@ -1,10 +1,10 @@
 .menu-list {
   padding: 0;
   list-style: none;
-  margin: 0 auto;
+  margin: 10px auto 0;
   text-align: center;
   margin-bottom: 2px;
-  display: block;
+  display: none;
   width: 100%;
 }
 
@@ -14,6 +14,10 @@
   padding-bottom: 22px;
   position: relative;
   border-top: 1px solid hsl(0, 0%, 80%);
+
+  &_last {
+    padding-bottom: 7px;
+  }
 }
 
 .menu-list__link {
@@ -26,8 +30,8 @@
   cursor: pointer;
 }
 
-.menu__opened {
-  display: none;
+.menu-opened {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
@@ -44,6 +48,7 @@
     margin-left: auto;
     padding-top: 20px;
     border: none;
+    padding-bottom: 22px;
   }
 
   .menu-list__link {
