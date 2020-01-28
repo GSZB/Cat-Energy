@@ -14,14 +14,6 @@
   }
 }
 
-@-moz-document url-prefix() {
-  .owner {
-    &::before {
-      top: -27px;
-    }
-  }
-}
-
 .owner__title {
   @include text-style-title;
   text-transform: none;

@@ -39,20 +39,13 @@
     margin-right: 11px;
     width: 114px;
   }
-}
 
-@-moz-document url-prefix() {
-  .copyright__text {
-    width: 115px;
+  .copyright__logo {
+    display: block;
+  }
+
+  .copyright__image {
+    width: 50px;
+    height: 40px;
   }
 }
-
-.copyright__logo {
-  display: block;
-}
-
-.copyright__image {
-  width: 50px;
-  height: 40px;
-}
-

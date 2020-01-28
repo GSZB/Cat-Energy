@@ -195,14 +195,6 @@
     }
   }
 
-  @-moz-document url-prefix() {
-  .program__link {
-    &::after {
-      top: 3px;
-    }
-  }
-  }
-
   .program__link_pro::after {
     left: 125px;
   }

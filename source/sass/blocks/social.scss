@@ -30,9 +30,11 @@
   display: inline-block;
   font-size: 0;
   fill: $dark-grey;
+
   &:hover {
     fill: $main-color-green;
   }
+
   &:active {
     fill: $main-color-green;
     opacity: 0.3;
@@ -44,6 +46,7 @@
   &:hover {
     fill: $main-color-green;
   }
+
   &:active {
     fill: $main-color-green;
     opacity: 0.3;
