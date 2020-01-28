@@ -1,7 +1,7 @@
 .copyright {
   display: flex;
   background: $light-grey 320px 300px;
-  padding: 6px 13px 15px 19px;
+  padding: 6px 8px 14px 19px;
 }
 
 .copyright__text {
@@ -18,10 +18,10 @@
 }
 
 .copyright__image {
-  color: $dark-grey;
+  fill: $dark-grey;
 
   &:hover {
-    color: $leaf;
+    fill: $leaf;
   }
 
   &:active {
@@ -36,8 +36,23 @@
   }
 
   .copyright__text {
-    margin-right: 15px;
+    margin-right: 11px;
     width: 114px;
   }
+}
+
+@-moz-document url-prefix() {
+  .copyright__text {
+    width: 115px;
+  }
+}
+
+.copyright__logo {
+  display: block;
+}
+
+.copyright__image {
+  width: 50px;
+  height: 40px;
 }
 

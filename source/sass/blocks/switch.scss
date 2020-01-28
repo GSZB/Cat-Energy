@@ -10,6 +10,7 @@
   border: none;
   background: transparent;
   font-family: $main-text;
+  padding: 0;
 
   &_left {
     margin-left: 11%;
@@ -89,13 +90,15 @@
   .switch__text {
     font-size: 20px;
     margin-top: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted $dark-grey;
 
     &_left {
-      margin-left: 11%;
+      margin-left: 87px;
     }
 
     &_right {
-      margin-right: 11%;
+      margin-right: 87px;
     }
   }
 

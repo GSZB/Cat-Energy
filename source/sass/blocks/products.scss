@@ -1,5 +1,6 @@
 .products__container {
   @include container;
+  padding: 25px 20px;
 }
 
 .products__title {

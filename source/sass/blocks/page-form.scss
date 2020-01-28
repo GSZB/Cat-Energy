@@ -66,6 +66,10 @@
     padding-top: 40px;
   }
 
+  .page-form__form {
+    padding-bottom: 61px;
+  }
+
   .page-form__title {
     font-size: 60px;
     margin-top: 12px;
@@ -105,6 +109,10 @@
 @media (min-width: $desktop-width) {
   .page-form__container {
     padding-top: 38px;
+  }
+
+  .page-form__form {
+    padding-bottom: 0;
   }
 
   .page-form__title {

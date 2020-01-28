@@ -52,6 +52,14 @@
     }
   }
 
+  @-moz-document url-prefix() {
+    .comment {
+      &::before {
+        top: -43px;
+      }
+    }
+  }
+
   .comment__title {
     font-size: 36px;
     margin-left: 30px;

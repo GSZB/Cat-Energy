@@ -116,7 +116,7 @@
       @media (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
         background-position: left;
-        background-size: contain;
+        background-size: cover;
       }
     }
   }

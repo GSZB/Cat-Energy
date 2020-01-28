@@ -1,3 +1,11 @@
+.footer {
+  background-color: $light-grey;
+}
+
+.footer__index {
+  background-color: $white;
+}
+
 .footer__container {
   @include container;
   width: 100%;
@@ -24,7 +32,11 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {s
+  .footer__index {
+    background-color: $white;
+  }
+
   .footer__container {
     padding-left: 0;
     padding-right: 0;
@@ -35,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     background: $light-grey;
-    padding: 24px 24px 22px 31px;
+    padding: 20px 18px 18px 31px;
     align-items: center;
   }
 }
@@ -48,7 +60,7 @@
 
   .footer__wrapper {
     margin: 0 auto;
-    padding: 28px 33px 22px 40px;
+    padding: 28px 28px 18px 40px;
     width: 1300px;
   }
 }

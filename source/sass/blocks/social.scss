@@ -4,11 +4,11 @@
   list-style: none;
   padding: 0;
   position: relative;
-  padding-bottom: 35px;
+  padding-bottom: 26px;
   background: $light-grey;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 14px;
+  padding-top: 17px;
 
   &::before {
     @include footer-stripes;
@@ -27,39 +27,34 @@
 }
 
 .social__link {
-  display: flex;
-
-  &_vk {
-    margin-top: 4px;
-  }
-
-  &_insta {
-    margin-top: 2px;
-  }
-}
-
-.social__image {
+  display: inline-block;
+  font-size: 0;
+  fill: $dark-grey;
   &:hover {
-    fill: $leaf;
+    fill: $main-color-green;
   }
-
   &:active {
+    fill: $main-color-green;
     opacity: 0.3;
   }
 }
 
-.social__image-insta {
-  color: $dark-grey;
 
+.social__img {
   &:hover {
-    color: $leaf;
+    fill: $main-color-green;
+  }
+  &:active {
+    fill: $main-color-green;
+    opacity: 0.3;
   }
 }
 
 @media (min-width: $tablet-width) {
   .social {
-    padding-top: 28px;
+    padding-top: 26px;
     margin-left: 18px;
+    align-items: center;
 
     &::before,
     &::after {
@@ -71,18 +66,18 @@
     margin-right: 14px;
   }
 
-  .social__link_vk {
+  .social__img_vk {
     width: 30px;
     height: 17px;
   }
 
-  .social__link_insta {
+  .social__img_insta {
     width: 23px;
     height: 23px;
   }
 
-  .social__link_fb {
-    width: 15px;
-    height: 27px;
+  .social__img_fb {
+    width: 13px;
+    height: 29px;
   }
 }

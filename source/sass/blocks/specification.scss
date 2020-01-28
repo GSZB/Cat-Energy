@@ -9,7 +9,15 @@
   margin-top: 26px;
   line-height: 20px;
   margin-bottom: 13px;
+  text-decoration: none;
+  display: block;
 }
+
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .specification__title {
+    text-decoration: none;
+  }
+ }
 
 .specification__row {
   width: 141px;
@@ -21,6 +29,7 @@
   font-size: 12px;
   font-family: $arial;
   line-height: 16px;
+  text-transform: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -78,6 +87,13 @@
 }
 
 @media (min-width: $desktop-width) {
+
+  @supports (-ms-accelerator:true) {
+    .specification__title {
+      text-decoration: none;
+    }
+  }
+
   .specification__parameters {
     margin-left: 37px;
   }
